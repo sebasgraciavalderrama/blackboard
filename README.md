@@ -1,6 +1,6 @@
 This is my personal repository during my time in Blackboard Inc. as a Software Engineer (Contractor).
 
-Here is some useful documentation about Git, Service Architecture (Worth reading):
+Here is some useful documentation about Git, Service Architecture, RESTful Web Services, etc (Worth reading):
 
 Git documentation: https://git-scm.com/doc
 
