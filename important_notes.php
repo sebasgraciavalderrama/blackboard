@@ -77,3 +77,7 @@ PARA CREAR UNA NUEVA BRANCH Y LUEGO HACER EL KOW PUSH ( EN EL CASO DE QUE NO EXI
 git checkout -b (feature or update)/INT-XXXXX_<NAME-OF-THE-BRANCH>
   git checkout -b update/INT-14022_heuristic-salamander
 kow push -p
+
+PARA HACER EL GIT CHERRY-PICK
+git cherry-pick <commit-hash>
+  estos hash estan en mroomstech dentro del pull request y toca hacerlo del mas viejo al ultimo
