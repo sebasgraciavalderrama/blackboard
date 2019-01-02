@@ -80,4 +80,4 @@ kow push -p
 
 PARA HACER EL GIT CHERRY-PICK
 git cherry-pick <commit-hash>
-  estos hash estan en mroomstech dentro del pull request y toca hacerlo del mas viejo al ultimo
+  estos hash de los commits estan en mroomstech dentro del pull request y toca hacerlo del mas viejo al ultimo
