@@ -87,3 +87,12 @@ PARA REBASE
 
 VIDEO YOUTUBE PLD
 https://www.youtube.com/watch?v=YUvfziypPvs
+
+CREATING CUSTOM ROLES
+https://docs.moodle.org/36/en/Creating_custom_roles
+
+ARCHETYPES
+https://docs.moodle.org/dev/Role_archetypes
+
+ACCESS API
+https://docs.moodle.org/dev/Access_API#How_to_define_new_capabilities_in_plugins
