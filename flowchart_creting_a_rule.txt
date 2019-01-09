@@ -1,0 +1,20 @@
+1. Instantiate a new rule
+    context -> view.php?controller=editrule&courseid=XXX&action=add&ruleid=0
+    In the protected function init(){
+        If the rule exist's get the rule through the id
+            rule = local_pld_get_rule(ruleid)
+        else create a new one with ruleid=0
+            rule = new local_pld_rule(0) //it's 0 'cause we are creating a dummy for the moment
+    }
+2. In public function save_action(){
+    All the rule data such as: rule name, disabled, condition evaluation mode, userid, courseid, events, conditions and actions
+    are going to be fetched/created/saved to/from the pld database.
+    2.1 Insert the rule into the table 'local_pld_rule'
+        If the rule exist's then update it
+            $DB->update_record(...)
+        else add it with new event, condition, actions
+            $DB->insert_record(local_pld_rule_trigger, $event)
+            $DB->insert_record(local_pld_condition, $condition)
+            $DB->insert_record(local_pld_condition, $action)
+            $DB->insert_record(local_pld_rule_action, array(ruleid, actionid, sequence))
+    }
