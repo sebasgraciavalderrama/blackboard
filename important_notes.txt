@@ -66,6 +66,7 @@ git push -f origin nombre_branch
 
 git push -f origin feature/INT-13902_superficial-rattlesnake
 git push -f origin feature/INT-13698_substantial-newt
+git push -f origin origin/update/INT-12776_juvenile-tortoise
 
 PARA AGREGAR LOS MODIFICADOS Y NO LOS NUEVOS
 git add . -u
@@ -100,3 +101,11 @@ https://docs.moodle.org/dev/Access_API#How_to_define_new_capabilities_in_plugins
 PLD VIDEO RESOURCES
     https://www.youtube.com/watch?v=YUvfziypPvs&
     https://www.youtube.com/watch?v=UWjbPQRyJcI
+
+    001 Example: | clean | # /var/www/mrhosts/bamboo6/xml-data/build-dir/DEV-MOOD1176-BEH/local/geniusws/tests/behat/genius_sso.feature:157
+
+    002 Example: | snap  | # /var/www/mrhosts/bamboo6/xml-data/build-dir/DEV-MOOD1176-BEH/local/geniusws/tests/behat/genius_sso.feature:158
+
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/geniusws/tests/behat/genius_sso.feature
+
+git commit -m "INT-12776: Added new steps to behat test and conditional operator"
