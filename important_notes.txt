@@ -112,4 +112,14 @@ git commit -m "INT-12776: Added new steps to behat test and conditional operator
 
 BACKPORT VIDEO
     https://us.bbcollab.com/recording/40866604289a4ea88ece11bdd7874bc0
-    
+
+
+HOW TO DISABLE PLUGINS, BLOCKS, ETC
+ In the file /www/moodle/config_local.php
+ Uncomment the type of component you want to disable;
+    If you want to disable a block then uncomment '$_MR_BLOCKS           = mr_all_plugins('blocks');'
+ Then add this into a new line: 'unset($_MR_BLOCKS['collect']);'
+ Then go to Site administration->Type into the search box 'control panel'->Select 'Control Panel'->And navigate to the type of $_MR_XXXX
+ and you should see the component with the label 'Disabled' right next to it
+ Purging caches might not be necessary but you could purge them any ways.
+
