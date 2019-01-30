@@ -123,11 +123,15 @@ HOW TO DISABLE PLUGINS, BLOCKS, ETC
  and you should see the component with the label 'Disabled' right next to it
  Purging caches might not be necessary but you could purge them any ways.
 
-
- Hi,
-
- We tried to replicate the bug in our sandbox site's and local site's but the creation of rules using 'Recurring events' and 'Specific date and time' events works fine and no error is thrown.
-
- The Collect block was disabled beforehand and no issue was found when creating  the rule with the events mentioned earlier. Of course, creating rules with the Collect block enabled was tested too and no errors as well.
-
- Please see the attached video to see the behavior of the test. The client's site was used, local site and some sandboxes and no error was found i those
+DEBUG WHATS INSIDE A VAR
+    public static function login_url() {
+        global $PAGE;
+        fwrite(STDERR, 'PAGE URL set? ' . isset($PAGE->url) . PHP_EOL); //this line prints the error through terminal
+        if (!PHPUNIT_TEST && isset($PAGE->url)) {
+            fwrite(STDERR, 'PAGE URL: ' . $PAGE->url . PHP_EOL); //this line prints the error through terminal
+            $url = $PAGE->url;
+        } else {
+            $url = null;
+        }
+        return new \moodle_url('/local/geniusws/login.php', ['referrer' => $url]);
+    }
