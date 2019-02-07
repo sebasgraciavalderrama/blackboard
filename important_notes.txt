@@ -141,7 +141,7 @@ USING $CFG TO DESCRIBE A CONTEXT
     $CFG->dirroot/local/pld/classes/form/formattedcourse.php
 
 IN config_kow.php YOU CAN FIND THE CURRENT DATABASE NAME
-    i.e. INT12344
+    i.e. $CFG->dbname = 'INT12344'
 
 HOW TO GET CONTEXT
     https://docs.moodle.org/dev/Access_API#Context_fetching
