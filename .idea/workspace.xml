@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1286b155-b86e-4710-86c5-71e5480a2dc0" name="Default Changelist" comment="Moodle documentation added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/important_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/important_notes.txt" afterDir="false" />
-    </list>
+    <list default="true" id="1286b155-b86e-4710-86c5-71e5480a2dc0" name="Default Changelist" comment="Moodle documentation added" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +114,7 @@
       <workItem from="1549295114183" duration="428000" />
       <workItem from="1549398384338" duration="394000" />
       <workItem from="1549456628704" duration="343000" />
-      <workItem from="1549546672634" duration="1716000" />
+      <workItem from="1549546672634" duration="2175000" />
     </task>
     <task id="LOCAL-00001" summary="Moodle documentation added">
       <created>1546974196772</created>
@@ -131,7 +127,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23348000" />
+    <option name="totallyTimeSpent" value="23807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
