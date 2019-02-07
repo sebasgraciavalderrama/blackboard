@@ -36,6 +36,8 @@ vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personalmenu_grades.feature
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/course_category_colors_setting.feature
 
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
+
 XPATH
 And I click on "//a[@file='repo_upload_file']]" "xpath_element"
 //input[@type='file']
@@ -145,3 +147,7 @@ IN config_kow.php YOU CAN FIND THE CURRENT DATABASE NAME
 
 HOW TO GET CONTEXT
     https://docs.moodle.org/dev/Access_API#Context_fetching
+
+EXTRACT .TAR.GZ FILES
+    tar xvzf NameOfFile.tar.gz
+
