@@ -144,3 +144,6 @@ IN config_kow.php YOU CAN FIND THE CURRENT DATABASE NAME
 
 HOW TO GET CONTEXT
     https://docs.moodle.org/dev/Access_API#Context_fetching
+
+HOW TO SAVE YOUR TERMINAL OUTPUT TO A FILE
+ script (type this into your terminal and it will start recording)
