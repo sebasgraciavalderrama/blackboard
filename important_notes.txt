@@ -164,4 +164,3 @@ HOW TO CHANGE THE EXTENSION OF A FILE
 
 HOW TO MOVE FILES TO ANOTHER FOLDER
     mv your_file.extension new/path/
-    
