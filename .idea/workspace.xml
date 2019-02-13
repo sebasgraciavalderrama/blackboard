@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1286b155-b86e-4710-86c5-71e5480a2dc0" name="Default Changelist" comment="Moodle documentation added">
-      <change beforePath="$PROJECT_DIR$/important_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/important_notes.txt" afterDir="false" />
-    </list>
+    <list default="true" id="1286b155-b86e-4710-86c5-71e5480a2dc0" name="Default Changelist" comment="Moodle documentation added" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/important_notes.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="187" column="108" selection-start-line="187" selection-start-column="108" selection-end-line="187" selection-end-column="108" />
+            <state relative-caret-position="359">
+              <caret line="69" column="19" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -121,7 +119,7 @@
       <workItem from="1549888347673" duration="2304000" />
       <workItem from="1549988059216" duration="9000" />
       <workItem from="1549988101419" duration="6000" />
-      <workItem from="1550073768743" duration="3850000" />
+      <workItem from="1550073768743" duration="4192000" />
     </task>
     <task id="LOCAL-00001" summary="Moodle documentation added">
       <created>1546974196772</created>
@@ -134,7 +132,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30331000" />
+    <option name="totallyTimeSpent" value="30673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -198,8 +196,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/important_notes.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="187" column="108" selection-start-line="187" selection-start-column="108" selection-end-line="187" selection-end-column="108" />
+        <state relative-caret-position="359">
+          <caret line="69" column="19" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="19" />
         </state>
       </provider>
     </entry>
