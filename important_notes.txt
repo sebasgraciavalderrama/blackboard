@@ -181,3 +181,8 @@ Error code: generalexceptionmessage
 * line 101 of /local/pld/classes/webservice/pld_search_courses.php: call to local_pld\webservice\pld_search_courses::search_courses()
 * line 228 of /lib/externallib.php: call to local_pld\webservice\pld_search_courses::local_pld_search_courses()
 * line 59 of /lib/ajax/service.php: call to external_api::call_external_function()
+
+
+SET GOALS - BLACKBOARD
+
+https://onblackboard.sharepoint.com/sites/HR/PerformanceManagement/Pages/Goals-Management-for-Employees.aspx
