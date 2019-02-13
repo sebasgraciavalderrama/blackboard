@@ -36,6 +36,16 @@ vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personalmenu_grades.feature
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/course_category_colors_setting.feature
 
+
+PLD BEHAT TEST'S
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol_disable.feature
+
+
+ERROR WHEN THE WEBSERVICE IS NOT DECLARED CORRECTLY
+        Unknown error type: Class 'local_pld\webservice\external_api' not
+        found at /vagrant/www/moodle/local/pld/classes/webservice/pld_search_courses.php: 39 (Exception)
+
 XPATH
 And I click on "//a[@file='repo_upload_file']]" "xpath_element"
 //input[@type='file']
@@ -164,3 +174,10 @@ HOW TO CHANGE THE EXTENSION OF A FILE
 
 HOW TO MOVE FILES TO ANOTHER FOLDER
     mv your_file.extension new/path/
+
+STACK TRACE OF BEHAT ERROR WHEN THE PLD WEBSERVICE IS NOT CALLED CORRECTLY
+Error code: generalexceptionmessage
+* line 228 of /local/pld/classes/webservice/pld_search_courses.php: Error thrown
+* line 101 of /local/pld/classes/webservice/pld_search_courses.php: call to local_pld\webservice\pld_search_courses::search_courses()
+* line 228 of /lib/externallib.php: call to local_pld\webservice\pld_search_courses::local_pld_search_courses()
+* line 59 of /lib/ajax/service.php: call to external_api::call_external_function()
