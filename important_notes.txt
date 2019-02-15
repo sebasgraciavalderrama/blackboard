@@ -94,7 +94,7 @@ git cherry-pick <commit-hash>
   estos hash de los commits estan en mroomstech dentro del pull request y toca hacerlo del mas viejo al ultimo
 
 PARA REBASE
-  ```git pull origin release/3.5+1 --rebase```
+    git pull origin release/3.5+2 --rebase
 
 VIDEO YOUTUBE PLD
 https://www.youtube.com/watch?v=YUvfziypPvs
@@ -186,3 +186,6 @@ Error code: generalexceptionmessage
 SET GOALS - BLACKBOARD
 
 https://onblackboard.sharepoint.com/sites/HR/PerformanceManagement/Pages/Goals-Management-for-Employees.aspx
+
+
+kow accept https://github.com/blackboard-open-source/moodle-filter_ally/pull/12 filter/ally
