@@ -25,7 +25,8 @@
 PARA EJECUTAR EL UPGRADE DESDE CONSOLA (CAMBIOS HECHOS SOBRE upgrade.php)
     php admin/cli/upgrade.php
 
-en el caso que le llegue a salir algo de que no esta inicializado el servidor de selenium, escriba esto `behat-servers-start` (edited)
+SI EL SERVIDOR DE SELENIUM MUESTRA PROBLEMAS
+    behat-servers-start
 
 INCIALIZAR BEHAT
     php admin/tool/behat/cli/init.php
@@ -41,6 +42,9 @@ Esto es para el ticket 13698 Behat tests
 PLD BEHAT TEST'S
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol_disable.feature
+
+ALLY LTI BEHAT TEST'S (GUY PR COMMIT Logger)
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/view_report.feature
 
 
 ERROR WHEN THE WEBSERVICE IS NOT DECLARED CORRECTLY
@@ -195,9 +199,7 @@ SET GOALS - BLACKBOARD
 
 kow accept https://github.com/blackboard-open-source/moodle-filter_ally/pull/12 filter/ally
 
-
 vendor/bin/phpunit --colors "local_geniusws_server_service_test" local/geniusws/tests/server/service_test.php
-
 
 revert
 
@@ -219,3 +221,6 @@ kow accept https://github.com/blackboard-open-source/moodle-tool_ally/pull/23 ad
 HOW TO GRUNT FILES
     Desde '/Users/sebastiangracia/vagrant/www/moodle' ejecutar este comando:
         grunt uglify:amd --force
+
+HOW TO DELETE MODIFIED FILES FROM git status (i.e. When you execute a grunt command from moodle and it creates 400+ min.js files)
+    git reset --hard *DO THIS AFTER ADDING (git add path/to/file.myfile) THE FILES YOU WANT TO COMMIT*
