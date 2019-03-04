@@ -63,6 +63,7 @@ PARA CORRER LA PRUEBA
 vendor/bin/phpunit path/to/file
 Ejemplo:
   vendor/bin/phpunit local/mrooms/tests/course_test.php
+  vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 
 PARA IMPRIMIR EN REGUS
 regus.tierrafirme@regus.com
@@ -70,13 +71,15 @@ regus.tierrafirme@regus.com
 PARA HACER EL AMEND
 Agregar los archivos modificados:
   git add path/to/files
-git comit --amend
+git commit --amend
 (luego se hace el push forzado)
 git push -f origin nombre_branch
 
 git push -f origin feature/INT-13902_superficial-rattlesnake
 git push -f origin feature/INT-13698_substantial-newt
-git push -f origin origin/update/INT-12776_juvenile-tortoise
+git push -f origin origin/update/INT-12776_juvenile-tortoise /** dont add oriing**/
+git push -f origin update/INT-14160_acclaimed-cow
+git push -f origin update/INT-14118_exhausted-gecko
 
 PARA AGREGAR LOS MODIFICADOS Y NO LOS NUEVOS
 git add . -u
@@ -92,6 +95,7 @@ kow push -p
 PARA HACER EL GIT CHERRY-PICK
 git cherry-pick <commit-hash>
   estos hash de los commits estan en mroomstech dentro del pull request y toca hacerlo del mas viejo al ultimo
+    'git show' y luego seleccionar el hash del commit que quiero seleccionar...
 
 PARA REBASE
     git pull origin release/3.5+2 --rebase
@@ -184,8 +188,33 @@ Error code: generalexceptionmessage
 
 
 SET GOALS - BLACKBOARD
-
 https://onblackboard.sharepoint.com/sites/HR/PerformanceManagement/Pages/Goals-Management-for-Employees.aspx
 
+#----------------GUYS ALLY LOGGER PR - Psr logger #19------------------------#
 
 kow accept https://github.com/blackboard-open-source/moodle-filter_ally/pull/12 filter/ally
+
+
+vendor/bin/phpunit --colors "local_geniusws_server_service_test" local/geniusws/tests/server/service_test.php
+
+
+revert
+
+commit c5d1a1108943df8cb0186cef975b1e273667edd8 (origin/update/INT-14160_dreary-magpie, update/INT-14160_dreary-magpie)
+Author: Sebastian Gracia <sebastian.graciavalderrama@blackboard.com>
+Date:   Thu Feb 21 12:28:50 2019 -0500
+
+    INT-14160: Array context deleted
+
+commit 1a624bed15d824774bbc8f7aedd24ae44fddeb35 (origin/update/INT-14160_acclaimed-cow, update/INT-14160_acclaimed-cow)
+Author: Sebastian Gracia <sebastian.graciavalderrama@blackboard.com>
+Date:   Fri Feb 15 15:49:04 2019 -0500
+
+    INT-14160: Node module deleted
+
+kow accept https://github.com/blackboard-open-source/moodle-tool_ally/pull/23 admin/tool/ally
+#-----------------------------------------------------------#
+
+HOW TO GRUNT FILES
+Desde '/Users/sebastiangracia/vagrant/www/moodle' ejecutar este comando:
+    grunt uglify:amd --force
