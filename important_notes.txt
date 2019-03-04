@@ -23,23 +23,24 @@
 */
 
 PARA EJECUTAR EL UPGRADE DESDE CONSOLA (CAMBIOS HECHOS SOBRE upgrade.php)
-php admin/cli/upgrade.php
+    php admin/cli/upgrade.php
 
 en el caso que le llegue a salir algo de que no esta inicializado el servidor de selenium, escriba esto `behat-servers-start` (edited)
 
-a todo enter cuando kow up y luego si para incializar el behat se manda este comando `php admin/tool/behat/cli/init.php`
+INCIALIZAR BEHAT
+    php admin/tool/behat/cli/init.php
 
 Esto es para el ticket 13698 Behat tests
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/ajax_logout_msg.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/assignment_grading_capabilities.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personal_menu_messages.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personalmenu_grades.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/course_category_colors_setting.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/ajax_logout_msg.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/assignment_grading_capabilities.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personal_menu_messages.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personalmenu_grades.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/course_category_colors_setting.feature
 
 
 PLD BEHAT TEST'S
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol_disable.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol_disable.feature
 
 
 ERROR WHEN THE WEBSERVICE IS NOT DECLARED CORRECTLY
@@ -47,33 +48,33 @@ ERROR WHEN THE WEBSERVICE IS NOT DECLARED CORRECTLY
         found at /vagrant/www/moodle/local/pld/classes/webservice/pld_search_courses.php: 39 (Exception)
 
 XPATH
-And I click on "//a[@file='repo_upload_file']]" "xpath_element"
-//input[@type='file']
+    And I click on "//a[@file='repo_upload_file']]" "xpath_element"
+    //input[@type='file']
 
 PARA QUITAR UN ARCHIVO DEL COMMIT
-git reset HEAD /path/to/file/file.xyz
-git status
-git commit -m "INT-123: Descripcion 123 abc xyz"
+    git reset HEAD /path/to/file/file.xyz
+    git status
+    git commit -m "INT-123: Descripcion 123 abc xyz"
 
 PARA SUBIR EL PHPUnit
-php admin/tool/phpunit/cli/init.php
-vendor/bin/phpunit path/to/file
+    php admin/tool/phpunit/cli/init.php
+    vendor/bin/phpunit path/to/file
 
 PARA CORRER LA PRUEBA
-vendor/bin/phpunit path/to/file
-Ejemplo:
-  vendor/bin/phpunit local/mrooms/tests/course_test.php
-  vendor/bin/phpunit local/mrooms/tests/plugins_test.php
+    vendor/bin/phpunit path/to/file
+    Ejemplo:
+      vendor/bin/phpunit local/mrooms/tests/course_test.php
+      vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 
 PARA IMPRIMIR EN REGUS
-regus.tierrafirme@regus.com
+    regus.tierrafirme@regus.com
 
 PARA HACER EL AMEND
-Agregar los archivos modificados:
-  git add path/to/files
-git commit --amend
-(luego se hace el push forzado)
-git push -f origin nombre_branch
+    Agregar los archivos modificados:
+      git add path/to/files
+    git commit --amend
+    (luego se hace el push forzado)
+    git push -f origin nombre_branch
 
 git push -f origin feature/INT-13902_superficial-rattlesnake
 git push -f origin feature/INT-13698_substantial-newt
@@ -82,32 +83,32 @@ git push -f origin update/INT-14160_acclaimed-cow
 git push -f origin update/INT-14118_exhausted-gecko
 
 PARA AGREGAR LOS MODIFICADOS Y NO LOS NUEVOS
-git add . -u
+    git add . -u
 
 PARA MIRAR EL LOG DEL GIT
-git log
+    git log
 
 PARA CREAR UNA NUEVA BRANCH Y LUEGO HACER EL KOW PUSH ( EN EL CASO DE QUE NO EXISTA UNA BRANCH e.g: MR 3.5 MP 1 no existe)
-git checkout -b (feature or update)/INT-XXXXX_<NAME-OF-THE-BRANCH>
-  git checkout -b update/INT-14022_heuristic-salamander
-kow push -p
+    git checkout -b (feature or update)/INT-XXXXX_<NAME-OF-THE-BRANCH>
+      git checkout -b update/INT-14022_heuristic-salamander
+    kow push -p
 
 PARA HACER EL GIT CHERRY-PICK
-git cherry-pick <commit-hash>
-  estos hash de los commits estan en mroomstech dentro del pull request y toca hacerlo del mas viejo al ultimo
-    'git show' y luego seleccionar el hash del commit que quiero seleccionar...
+    git cherry-pick <commit-hash>
+      estos hash de los commits estan en mroomstech dentro del pull request y toca hacerlo del mas viejo al ultimo
+        'git show' y luego seleccionar el hash del commit que quiero seleccionar...
 
 PARA REBASE
     git pull origin release/3.5+2 --rebase
 
 VIDEO YOUTUBE PLD
-https://www.youtube.com/watch?v=YUvfziypPvs
+    https://www.youtube.com/watch?v=YUvfziypPvs
 
 CREATING CUSTOM ROLES
-https://docs.moodle.org/36/en/Creating_custom_roles
+    https://docs.moodle.org/36/en/Creating_custom_roles
 
 ARCHETYPES
-https://docs.moodle.org/dev/Role_archetypes
+    https://docs.moodle.org/dev/Role_archetypes
 
 ACCESS API
 https://docs.moodle.org/dev/Access_API#How_to_define_new_capabilities_in_plugins
@@ -160,7 +161,7 @@ HOW TO GET CONTEXT
     https://docs.moodle.org/dev/Access_API#Context_fetching
 
 HOW TO SAVE YOUR TERMINAL OUTPUT TO A FILE
- script (type this into your terminal and it will start recording)
+    script (type this into your terminal and it will start recording)
 
 HOW TO EXTRACT FILES
     Type man tar for more information, but this command should do the trick:
@@ -180,15 +181,15 @@ HOW TO MOVE FILES TO ANOTHER FOLDER
     mv your_file.extension new/path/
 
 STACK TRACE OF BEHAT ERROR WHEN THE PLD WEBSERVICE IS NOT CALLED CORRECTLY
-Error code: generalexceptionmessage
-* line 228 of /local/pld/classes/webservice/pld_search_courses.php: Error thrown
-* line 101 of /local/pld/classes/webservice/pld_search_courses.php: call to local_pld\webservice\pld_search_courses::search_courses()
-* line 228 of /lib/externallib.php: call to local_pld\webservice\pld_search_courses::local_pld_search_courses()
-* line 59 of /lib/ajax/service.php: call to external_api::call_external_function()
+    Error code: generalexceptionmessage
+    * line 228 of /local/pld/classes/webservice/pld_search_courses.php: Error thrown
+    * line 101 of /local/pld/classes/webservice/pld_search_courses.php: call to local_pld\webservice\pld_search_courses::search_courses()
+    * line 228 of /lib/externallib.php: call to local_pld\webservice\pld_search_courses::local_pld_search_courses()
+    * line 59 of /lib/ajax/service.php: call to external_api::call_external_function()
 
 
 SET GOALS - BLACKBOARD
-https://onblackboard.sharepoint.com/sites/HR/PerformanceManagement/Pages/Goals-Management-for-Employees.aspx
+    https://onblackboard.sharepoint.com/sites/HR/PerformanceManagement/Pages/Goals-Management-for-Employees.aspx
 
 #----------------GUYS ALLY LOGGER PR - Psr logger #19------------------------#
 
@@ -213,8 +214,8 @@ Date:   Fri Feb 15 15:49:04 2019 -0500
     INT-14160: Node module deleted
 
 kow accept https://github.com/blackboard-open-source/moodle-tool_ally/pull/23 admin/tool/ally
-#-----------------------------------------------------------#
+#----------------------------------------------------------------------------#
 
 HOW TO GRUNT FILES
-Desde '/Users/sebastiangracia/vagrant/www/moodle' ejecutar este comando:
-    grunt uglify:amd --force
+    Desde '/Users/sebastiangracia/vagrant/www/moodle' ejecutar este comando:
+        grunt uglify:amd --force
