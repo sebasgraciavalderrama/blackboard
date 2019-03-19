@@ -224,3 +224,14 @@ HOW TO GRUNT FILES
 
 HOW TO DELETE MODIFIED FILES FROM git status (i.e. When you execute a grunt command from moodle and it creates 400+ min.js files)
     git reset --hard *DO THIS AFTER ADDING (git add path/to/file.myfile) THE FILES YOU WANT TO COMMIT*
+
+
+STOP RECORDINGS ON MAC
+    COMMAND + CONTROL + ESC
+
+INT-14273
+    SELECT c.*
+    FROM {course_modules} cm
+    JOIN {course} c O4N c.id = cm.course
+    WHERE cm.id = ?
+    [array (0 => 401,)]
