@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/important_notes.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
+            <state relative-caret-position="482">
+              <caret line="235" column="19" lean-forward="true" selection-start-line="235" selection-start-column="19" selection-end-line="235" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -43,7 +43,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -144,7 +144,16 @@
       <workItem from="1551356901222" duration="685000" />
       <workItem from="1551443111533" duration="180000" />
       <workItem from="1551455500822" duration="3393000" />
-      <workItem from="1551789456007" duration="785000" />
+      <workItem from="1551789456007" duration="1262000" />
+      <workItem from="1551875328180" duration="731000" />
+      <workItem from="1552047342370" duration="172000" />
+      <workItem from="1552306545376" duration="253000" />
+      <workItem from="1552393824332" duration="97000" />
+      <workItem from="1552480383956" duration="165000" />
+      <workItem from="1552566265400" duration="230000" />
+      <workItem from="1552572015253" duration="860000" />
+      <workItem from="1552912642751" duration="792000" />
+      <workItem from="1552998511353" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="Moodle documentation added">
       <created>1546974196772</created>
@@ -157,7 +166,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46977000" />
+    <option name="totallyTimeSpent" value="51083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -170,10 +179,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="801" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18240343" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20529328" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -182,7 +191,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.15903614" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.15796897" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.49944505" />
@@ -222,8 +231,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/important_notes.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="117" column="4" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
+        <state relative-caret-position="482">
+          <caret line="235" column="19" lean-forward="true" selection-start-line="235" selection-start-column="19" selection-end-line="235" selection-end-column="19" />
         </state>
       </provider>
     </entry>
