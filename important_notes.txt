@@ -229,9 +229,73 @@ HOW TO DELETE MODIFIED FILES FROM git status (i.e. When you execute a grunt comm
 STOP RECORDINGS ON MAC
     COMMAND + CONTROL + ESC
 
-INT-14273
+INT-14273 - SI 04090783
     SELECT c.*
     FROM {course_modules} cm
     JOIN {course} c O4N c.id = cm.course
     WHERE cm.id = ?
     [array (0 => 401,)]
+
+HOW TO PRINT THE VALUE OF A VARIABLE
+    var_dump($MyVariable);
+
+INT-14215
+
+Scenario 1
+    Set up two pages with manual activity completion. Created PLD rule on activity completion of first page to display alert and PLD on activity completion of second page to redirect to an assignment.
+
+    Results testing in Snap: PLD history shows rule trigger upon manually marking page complete. Alert displayed only after reloading course. Redirect to assignment never happened, even after reload.
+    Results testing in Boost: Same behavior as Snap.
+
+Scenario 2:
+    Set up two pages with activity completion upon viewing page. Created PLD rule on activity completion of first page to display alert and PLD on activity completion of second page to redirect to an assignment.
+
+    Results testing in Boost: Alert displayed immediately upon opening page. Redirect also occurred upon opening page preventing opportunity to read page, could be mitigated with a delay on action.
+    Results testing in Snap: Clicking "Read more" button marks page complete and PLD history indicates rule triggered. However, alert only displayed upon reloading course. Redirect to assignment also only worked upon reloading the course.
+
+Scenario 3:
+    Set up two assignments with manual completion. Created PLD rule on activity completion of first assignment to display alert and PLD on activity completion of second assignment to redirect to a quiz.
+
+    Results testing in Snap: PLD history shows rules triggered upon manually marking assignments complete. Alert displayed only after reloading course. Redirect to assignment never happened, even after reload.
+    Results testing in Boost: PLD history shows rules triggered upon manually marking assignments complete. However, alert only displayed upon reloading course. Redirect to assignment also only worked upon reloading the course.
+
+
+#-----------HACKATHON-----------#
+
+Stories
+1. AVISO DE CAMBIO DE COLOR INVALIDO Y LINK CON MAS INFORMACION, NO OBLIGARLO SOLO WARNING. (SOY UN ADMIN, CAMBIO EL COLOR DEL SITIO, GUARDO CAMBIOS Y ME SALE EL WARNING....)
+2. PRUEBAS UNITARIAS.
+3. AL CARGAR UNA IMAGEN, CARGARLA EN MEMORIA Y HACER EL HISTOGRAMA Y HACER LOS CALCULOS
+    3.1 CONTRASTE CON LAS IMAGENES: HISTOGRAMA -> EL MAYOR/MENOR NUMERO SE COMPARA
+        IDENTIFICAR LA 3RA PARTE/30% IZQ SUPERIOR Y COMPRAR EL CONTRASTE Y DECIR UN WARNING
+4. DEBAJO DEL COLOR DECIR: ESTE COLOR NO CUMPLE CON LOS CONTRASTES REQUERIDOS.....
+    EN SNAP->NAVIGATION COLOR
+             COVER DISPLAY
+
+
+RESEARCH
+CHANGE RGB TO PALETTE FOR COLOR BLINDES
+
+
+
+
+
+SITE COLOR - BOTONES, TEXTO, LINKS, ICONOS (FG)
+NAV BAR BK
+NAV BAR FG
+BUT NAV BAR BK
+BUT NAV BAR FG
+CATEGORY COLOR (FG) vs NAV BAR
+
+PENSAR TODAS LAS POSIBLES COMBINACIONES DE LOS COMPONENTES:
+1. SITE COLOR Vs. BLANCO (#FFFF)
+2. NAV BAR BK Vs. NAV BAR FG
+3. BUT NAV BAR BK Vs. BUT NAV BAR FG
+5. SITE COLOR Vs. BLANCO (DEFAULT) / y otras mas..
+6. CATEGORY COLOR Vs. POR DEFECTO SE COMPARA CON BLANCO SI LOS DE ABAJO NO ESTAN ACTIVADOS:
+                        6.1 NAV BAR BK
+                        6.2 BUT NAV BK
+
+#RGB
+#F00 (RED)
+#EF0000 (OTRO ROJO)
