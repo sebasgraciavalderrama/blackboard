@@ -241,24 +241,26 @@ HOW TO PRINT THE VALUE OF A VARIABLE
 
 INT-14215
 
-Scenario 1
-    Set up two pages with manual activity completion. Created PLD rule on activity completion of first page to display alert and PLD on activity completion of second page to redirect to an assignment.
+    Scenario 1
+        Set up two pages with manual activity completion. Created PLD rule on activity completion of first page to display alert and PLD on activity completion of second page to redirect to an assignment.
 
-    Results testing in Snap: PLD history shows rule trigger upon manually marking page complete. Alert displayed only after reloading course. Redirect to assignment never happened, even after reload.
-    Results testing in Boost: Same behavior as Snap.
+        Results testing in Snap: PLD history shows rule trigger upon manually marking page complete. Alert displayed only after reloading course. Redirect to assignment never happened, even after reload.
+        Results testing in Boost: Same behavior as Snap.
+    
+    Scenario 2:
+        Set up two pages with activity completion upon viewing page. Created PLD rule on activity completion of first page to display alert and PLD on activity completion of second page to redirect to an assignment.
 
-Scenario 2:
-    Set up two pages with activity completion upon viewing page. Created PLD rule on activity completion of first page to display alert and PLD on activity completion of second page to redirect to an assignment.
+        Results testing in Boost: Alert displayed immediately upon opening page. Redirect also occurred upon opening page preventing opportunity to read page, could be mitigated with a delay on action.
+        Results testing in Snap: Clicking "Read more" button marks page complete and PLD history indicates rule triggered. However, alert only displayed upon reloading course. Redirect to assignment also only worked upon reloading the course.
 
-    Results testing in Boost: Alert displayed immediately upon opening page. Redirect also occurred upon opening page preventing opportunity to read page, could be mitigated with a delay on action.
-    Results testing in Snap: Clicking "Read more" button marks page complete and PLD history indicates rule triggered. However, alert only displayed upon reloading course. Redirect to assignment also only worked upon reloading the course.
+    Scenario 3:
+        Set up two assignments with manual completion. Created PLD rule on activity completion of first assignment to display alert and PLD on activity completion of second assignment to redirect to a quiz.
 
-Scenario 3:
-    Set up two assignments with manual completion. Created PLD rule on activity completion of first assignment to display alert and PLD on activity completion of second assignment to redirect to a quiz.
+        Results testing in Snap: PLD history shows rules triggered upon manually marking assignments complete. Alert displayed only after reloading course. Redirect to assignment never happened, even after reload.
+        Results testing in Boost: PLD history shows rules triggered upon manually marking assignments complete. However, alert only displayed upon reloading course. Redirect to assignment also only worked upon reloading the course.
 
-    Results testing in Snap: PLD history shows rules triggered upon manually marking assignments complete. Alert displayed only after reloading course. Redirect to assignment never happened, even after reload.
-    Results testing in Boost: PLD history shows rules triggered upon manually marking assignments complete. However, alert only displayed upon reloading course. Redirect to assignment also only worked upon reloading the course.
 
+        Courses / Year3 / Semester2 / Math103Y3S2 / Math 103: Intermediate Algebra
 
 #-----------HACKATHON-----------#
 
@@ -272,13 +274,8 @@ Stories
     EN SNAP->NAVIGATION COLOR
              COVER DISPLAY
 
-
 RESEARCH
-CHANGE RGB TO PALETTE FOR COLOR BLINDES
-
-
-
-
+CHANGE RGB TO PALETTE FOR COLOR BLINDESS
 
 SITE COLOR - BOTONES, TEXTO, LINKS, ICONOS (FG)
 NAV BAR BK
@@ -299,3 +296,5 @@ PENSAR TODAS LAS POSIBLES COMBINACIONES DE LOS COMPONENTES:
 #RGB
 #F00 (RED)
 #EF0000 (OTRO ROJO)
+
+
