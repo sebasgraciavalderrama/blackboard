@@ -246,7 +246,7 @@ INT-14215
 
         Results testing in Snap: PLD history shows rule trigger upon manually marking page complete. Alert displayed only after reloading course. Redirect to assignment never happened, even after reload.
         Results testing in Boost: Same behavior as Snap.
-    
+
     Scenario 2:
         Set up two pages with activity completion upon viewing page. Created PLD rule on activity completion of first page to display alert and PLD on activity completion of second page to redirect to an assignment.
 
