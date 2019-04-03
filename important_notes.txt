@@ -297,4 +297,9 @@ PENSAR TODAS LAS POSIBLES COMBINACIONES DE LOS COMPONENTES:
 #F00 (RED)
 #EF0000 (OTRO ROJO)
 
+INT-14291
+
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/configure_lti_settings.feature
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/view_report.feature
+
 
