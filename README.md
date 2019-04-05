@@ -1,4 +1,4 @@
-This is my personal repository during my time in Blackboard Inc. as a Software Engineer (Contractor).
+This is my personal repository during my time in Blackboard Inc. as a Associate Software Engineer.
 
 Here is some useful documentation about Git, Service Architecture, RESTful Web Services(Worth reading), etc:
 
