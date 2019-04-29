@@ -1,6 +1,11 @@
 MY COLLAB PRIVATE ROOM
 https://bit.ly/2GJ38gi
 
+TO USE MAILHOG
+http://moodle.test:8025/#
+
+
+
 <?php
 
   if ($oldversion < 2018112000) {
@@ -356,6 +361,6 @@ of the class legacy log store that will be fully deprecated, based on this no sw
 The only findings about the usage of the legacy log store are validations of instances of the class in different components of the
  site (i.e instanceof expressions).
 
-
+vendor/bin/phpunit local/pld/tests/model/action_test.php
 
 
