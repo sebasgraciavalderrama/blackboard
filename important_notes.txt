@@ -361,6 +361,49 @@ of the class legacy log store that will be fully deprecated, based on this no sw
 The only findings about the usage of the legacy log store are validations of instances of the class in different components of the
  site (i.e instanceof expressions).
 
-vendor/bin/phpunit local/pld/tests/model/action_test.php
 
+INT-14244
+In local/pld/model/action.php
 
+/** NEW METHOD
+  * Validates if a user is suspended and exclude the user from the reciepent list
+  *
+  * @param array $recipients
+  * @param event $event
+  * @return array $reciepents
+  */
+ private function get_active_users($recipient, $courseid){
+     global $DB;
+     $sql = "SELECT userid FROM {user_enrolments} ue
+         JOIN {enrol} en on en.id = ue.enrolid
+         WHERE ue.status = 1
+         AND en.courseid = " . $courseid;
+
+     $suspended_users = $DB->get_records_sql($sql);
+
+     foreach ($recipient as $llave => $user) {
+         foreach ($suspended_users as $key => $object) {
+             if (strcmp($user->id, $object->userid) == 0) {
+                 unset($recipient[$llave]);
+             }
+         }
+     }
+     return $recipient;
+ }
+
+ In method
+ private function resolve_recipients($recipients, $event){
+        $resolved = array();
+
+        foreach($recipients as $recipient) {
+            foreach($this->resolve_recipient($recipient, $event) as $user){
+                $resolved[] = $user;
+            }
+                foreach($this->resolve_recipient($recipient, $event) as $user){
+                        $resolved[] = $user;
+                }
+        }
+
+        $resolved=$this->get_active_users($resolved, $event->courseid); //THIS LINE CLEANS RECIEPENTS THAT ARE SUSPENDED
+        return $resolved;
+    }
