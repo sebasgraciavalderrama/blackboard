@@ -53,3 +53,8 @@ $context1 = context_course::instance($id);
   attendance_webservices_tests test_get_session_with_group History
   local_pld_action_test test_email_to_custom_user History
   vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
+
+  INT-14329
+    MESSAGE_PRIVACY_SITE
+    lib/upgrade.txt
+    
