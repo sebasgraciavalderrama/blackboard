@@ -11,50 +11,10 @@ As a developer, I research and master a specific technical skill or skill set an
   complete this learning path (i.e. aws associate developer) or a set of courses
 
 3 As a developer I participate as Scrum master in Grooming, Planning and Daily standup processes towards guaranteeing successful team practicing and good metric.
-I want to assume the role of a Scrum master in our Grooming, Planning and Daily standup processes in the at least 4 sprints in the following 3 months/rest of the year/2 Q's
+I want to assist the role of a Scrum master in our Grooming, Planning and Daily standup processes in the at least 4 sprints in the following 3 months/rest of the year/2 Q's
   rewrite this...
 
 
 3 As a developer, I architect, lead and design a solution implemented and deployed by the dev team. I mentor and document knowledge built by new implementations, bug fixes or new practices found during the development process of the project I'm leading.
 
 4 I want to lead and design a solution implemented and deployed by the dev team (Epic); mentor and document knowledge built by the new implementation such as bug fixes or new practices found
-
-
-SELECT USER.ID FROM user_enrolments JOIN enrol on COURSE.ID = enrol.course.id WHERE ue.status = 0
-
-SELECT DISTINCT eu1_u.id
-              FROM {user} eu1_u
-            JOIN {user_enrolments} ej1_ue ON ej1_ue.userid = eu1_u.id
-            JOIN {enrol} ej1_e ON (ej1_e.id = ej1_ue.enrolid AND ej1_e.courseid = :ej1_courseid)
-             WHERE 1 = 1 AND ej1_ue.status = :ej1_active AND ej1_e.status = :ej1_enabled AND ej1_ue.timestart < :ej1_now1 AND (ej1_ue.timeend = 0 OR ej1_ue.timeend > :ej1_now2) AND eu1_u.deleted = 0
-Carrera 103D # 83-18 9-502
-
-$context1 = context_course::instance($id);
-
-    //$enrolado = get_enrolled_users($context1);
-    list($sqlenrolled, $params1) = get_enrolled_sql($context1, '','', true);
-    //$enrolado = get_enrolled_students('160','100','100');
-    //$enrolado = get_course('160');
-    //var_dump($context1->id);
-    //var_dump($sqlenrolled);
-    //var_dump($params1);
-    //$params = ['courseid' => $id];
-    $sql = "SELECT userid FROM {user_enrolments} ue
-            JOIN {enrol} en on en.id = ue.enrolid
-            WHERE ue.status = 0
-            AND en.courseid = " . $id;
-    $resultado  = $DB->get_records_sql($sql);
-    var_dump($resultado);
-
-
-    var_dump(strcmp($object->userid, $user['roleId']));
-
-  pld_enrol.feature
-  attendance_webservices_tests test_get_session_with_group History
-  local_pld_action_test test_email_to_custom_user History
-  vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
-
-  INT-14329
-    MESSAGE_PRIVACY_SITE
-    lib/upgrade.txt
-    
