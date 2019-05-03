@@ -407,3 +407,7 @@ In local/pld/model/action.php
         $resolved=$this->get_active_users($resolved, $event->courseid); //THIS LINE CLEANS RECIEPENTS THAT ARE SUSPENDED
         return $resolved;
     }
+
+INT-14329
+  $CFG->messagingallusers
+  \core_message\api::MESSAGE_PRIVACY_SITE
