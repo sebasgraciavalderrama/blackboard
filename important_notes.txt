@@ -411,3 +411,17 @@ In local/pld/model/action.php
 INT-14329
   $CFG->messagingallusers
   \core_message\api::MESSAGE_PRIVACY_SITE
+  php admin/tool/task/cli/schedule_task.php --execute="\mod_forum\task\cron_task"
+  php lib/classes/task/messaging_cleanup_task.php --execute=""
+  SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` FROM information_schema.TABLES WHERE table_schema = "moodleorg" AND table_name = "notifications";
+
+INT-14513 (Community Bulk upgrade 5)
+  In order to execute community bulk upgrades:
+  1. create a new branch (kow checkout INT-XXYYZZ)
+  2. Identify which pugins are due to be updated: i.e. "Update mod_turnitintooltwo with latest version https://moodle.org/plugins/mod_turnitintooltwo"
+  3. create the command with the plugins due to be updated: i.e. "kow plugins-db mod_turnitintooltwo block_xxxx ..."
+  4. Follow the appropiate:
+    4.1 If you have to fix conflicts remember to commit those changes right after you fix them: i.e. "git commit -m "INT-XXYYZZ: your description..." "
+    4.2 Type 'yes' in the terminal to continue...
+  5. After all changes/conflicts/updates are done, type 'git status' and you should see how many commits you have just made: i.e. 3 plugins updated = 3 commits.
+  
