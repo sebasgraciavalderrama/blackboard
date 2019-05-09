@@ -424,4 +424,24 @@ INT-14513 (Community Bulk upgrade 5)
     4.1 If you have to fix conflicts remember to commit those changes right after you fix them: i.e. "git commit -m "INT-XXYYZZ: your description..." "
     4.2 Type 'yes' in the terminal to continue...
   5. After all changes/conflicts/updates are done, type 'git status' and you should see how many commits you have just made: i.e. 3 plugins updated = 3 commits.
+  CHANGES MADE IN MOODLE/PLAGIARISM/TURNITIN/DB/UPGRADE.PHP
+
+
+  vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/eula.feature
+
+INT-14422
+###############################################!! role_assignments !!#############################################################
+  $DB->delete_records('role_assignments' //ONLY IN CORE
+  $DB->insert_record('role_assignments'  // in local/ccuser_ie/classes/task/import_photo_assessment_task.php
+                                                                           /import_student_orientation_task.php
+  $DB->update_record('role_assignments'  // in auth/joomdle/auth.php
+###############################################!! user_enrolments !!#############################################################
+  $DB->insert_record('user_enrolments'    // in local/ccuser_ie/classes/task/import_photo_assessment_task.php
+                                                                           /import_student_orientation_task.php
+  $DB->update_record('user_enrolments'   // in local/ccuser_ie/classes/task/import_photo_assessment_task.php
+                                                                           /import_student_orientation_task.php
+  $DB->delete_records('user_enrolments', // ONY IN CORE
+
+INT-14556
+  https://github.com/middlebury/moodle-mod_adaptivequiz/issues/58
   
