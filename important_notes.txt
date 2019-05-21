@@ -560,3 +560,10 @@ INT-14368
 
 Argument 1 passed to block_collect\privacy\provider::delete_data_for_users() must be an instance of block_collect\privacy\approved_userlist, instance of core_privacy\local\request\approved_userlist given,
 called in /vagrant/www/moodle/blocks/collect/tests/privacy_provider_test.php on line 363
+
+
+13/40/86/68/00
+
+
+vendor/bin/phpunit /blocks/intelligent_learning/tests/privacy_provider_test.php
+vendor/bin/phpunit /blocks/intelligent_learning/tests/privacy_provider_test.php
