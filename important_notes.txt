@@ -209,7 +209,11 @@ kow accept https://github.com/blackboard-open-source/moodle-filter_ally/pull/12 
 
 vendor/bin/phpunit --colors "local_geniusws_server_service_test" local/geniusws/tests/server/service_test.php
 
-revert
+HOW TO PRINT SOMETHING TO A TXT FILE (This file will be stored in the location of the file where this code is injected)
+  file_put_contents(“MyLog.txt”, print_r(array(
+                  ‘first_val’ => $prueba,
+                  ‘second_val’ => $timetotrigger
+              ), true), FILE_APPEND);
 
 commit c5d1a1108943df8cb0186cef975b1e273667edd8 (origin/update/INT-14160_dreary-magpie, update/INT-14160_dreary-magpie)
 Author: Sebastian Gracia <sebastian.graciavalderrama@blackboard.com>
@@ -567,3 +571,39 @@ called in /vagrant/www/moodle/blocks/collect/tests/privacy_provider_test.php on 
 
 vendor/bin/phpunit /blocks/intelligent_learning/tests/privacy_provider_test.php
 vendor/bin/phpunit /blocks/intelligent_learning/tests/privacy_provider_test.php
+
+  INT-14561
+  THIS METHOD DISPLAYS A ERROR WHEN SAVING A 'SPECIFIC DATE AND TIME' EVENT WHEN THE DATE IS IN THE PAST
+
+
+  public function get_display_text() {
+          $timetotrigger = $this->calculate_next_timetotrigger(time());
+
+          if (is_null($timetotrigger)) {
+              $a = html_writer::tag('span', get_string('trigger_time_past', 'local_pld'), array('class' => 'error'));
+          } else if (!local_pld_check_collector_depdendencies()) {
+              $a = html_writer::tag('span', get_string('trigger_time_collect_disabled', 'local_pld'), array('class' => 'error'));
+          } else {
+              $a = core_text::strtoupper(userdate($timetotrigger, get_string('trigger_time_format', 'local_pld')));
+          }
+          return get_string('trigger_time_x', 'local_pld', $a);
+      }
+
+  $a = html_writer::tag('span', get_string('trigger_time_past', 'local_pld'), array('class' => 'error'));
+
+  a:8:{s:4:"type";s:5:"daily";s:4:"days";a:1:{i:0;s:1:"1";}s:11:"dayinterval";i:5;s:4:"hour";s:1:"8";s:6:"minute";s:2:"30";s:9:"timestart";a:3:{s:3:"day";s:2:"10";s:5:"month";s:1:"9";s:4:"year";s:4:"2013";}s:7:"timeend";a:3:{s:3:"day";s:2:"26";s:5:"month";s:1:"6";s:4:"year";s:4:"2019";}s:8:"timezone";s:2:"99";}
+  a:8:{s:4:"type";s:5:"daily";s:4:"days";a:1:{i:0;s:1:"1";}s:11:"dayinterval";i:3;s:4:"hour";s:1:"8";s:6:"minute";s:2:"30";s:9:"timestart";a:3:{s:3:"day";s:2:"10";s:5:"month";s:1:"9";s:4:"year";s:4:"2013";}s:7:"timeend";a:3:{s:3:"day";s:2:"26";s:5:"month";s:1:"6";s:4:"year";s:4:"2019";}s:8:"timezone";s:2:"99";}
+
+  echo html_writer::label(get_string('entermessage', 'chat'), 'input_chat_message', false, array('class' => 'accesshide'));
+
+
+  a:3:{
+  s:6:"timing";s:6:"before";
+  s:4:"days";
+  a:4:{s:5:"_yuid";s:30:"yui_3_17_2_1_1559049532891_426";s:5:"_node";a:1:{s:5:"_yuid";s:30:"yui_3_17_2_1_1559049532891_426";}s:11:"_stateProxy";a:1:{s:5:"_yuid";s:30:"yui_3_17_2_1_1559049532891_426";}s:8:"_plugins";a:0:{}}
+  s:15:"coursestartdate";N;}
+
+
+  First test: Actual mm/dd/YYYY 05/19/2019, Expected mm/dd/YYYY 05/18/2019
+
+  Second test: Actual mm/dd/YYYY 05/19/2019, Expected mm/dd/YYYY 05/17/2019
