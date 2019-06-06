@@ -38,7 +38,7 @@ SI EL SERVIDOR DE SELENIUM MUESTRA PROBLEMAS
 
 INCIALIZAR BEHAT
     php admin/tool/behat/cli/init.php
-
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
 Esto es para el ticket 13698 Behat tests
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/ajax_logout_msg.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/assignment_grading_capabilities.feature
@@ -607,3 +607,108 @@ vendor/bin/phpunit /blocks/intelligent_learning/tests/privacy_provider_test.php
   First test: Actual mm/dd/YYYY 05/19/2019, Expected mm/dd/YYYY 05/18/2019
 
   Second test: Actual mm/dd/YYYY 05/19/2019, Expected mm/dd/YYYY 05/17/2019
+
+  GMT: Wednesday, April 10, 2019 4:00:00 PM
+  Your time zone: Wednesday, April 10, 2019 11:00:00 AM GMT-05:00
+  Relative: 2 months ago
+
+  GMT: Sunday, March 31, 2019 4:00:00 PM
+  Your time zone: Sunday, March 31, 2019 11:00:00 AM GMT-05:00
+  Relative: 2 months ago
+
+  ###########################################################################################################################################################
+
+  public function calculate_next_timetotrigger($now)
+  {
+      // Since the method is the same for both tests and the actual config of the event, PHP Unit test validation is needed.
+      if (PHPUNIT_TEST) {
+          $coursestartdate = $now;
+      } else {
+          $coursestartdate = $this->coursestartdate;
+      }
+      // Set of all the variables needed.
+      $timetotrigger = null;
+      $enddate = $this->courseenddate;
+      $days = $this->days;
+      $date = new DateTime();
+      $date->setTimestamp($coursestartdate);
+
+      // Validate if timing is before of after.
+      if ($this->timing == self::TYPE_BEFORE) {
+          // Take or add days to the course start date
+          $date->sub(new DateInterval('P' . $days . 'D'));
+          $timetotrigger = $date->getTimestamp();
+      } else if ($this->timing == self::TYPE_AFTER) {
+          $date->add(new DateInterval('P' . $days . 'D'));
+          $timetotrigger = $date->getTimestamp();
+          // Validate that course end date is younger than $newdate and course end date is equal to 0.
+          if ($enddate < $timetotrigger && $enddate != 0) {
+              // If course end date is younger than $timetotrigger wi will assign the course end date, this could change.
+              $timetotrigger = $enddate;
+          }
+      }
+      return $timetotrigger;
+  }
+
+###########################################################################################################################################################
+
+  public function test_course_start_date_after_course_end_date() {
+    $trigger = new local_pld_trigger_course_start_date(0);
+    $trigger->set_timing(local_pld_trigger_course_start_date::TYPE_AFTER);
+    $trigger->set_days(10);
+
+    $trigger->set_courseenddate(strtotime("04/08/2019"));
+
+    $actual = $trigger->calculate_next_timetotrigger(strtotime("04/01/2019"));
+    $expected = strtotime("04/08/2019");
+
+    $this->assertEquals($expected, $actual);
+}
+
+###########################################################################################################################################################
+
+public function get_display_text()
+    {
+        // Set of all variables needed.
+        $enddate = $this->courseenddate;
+        $startdate = $this->coursestartdate;
+        $days = $this->days;
+        $a = null;
+        $timing = $this->timing;
+
+        $date = new DateTime();
+        $date->setTimestamp($startdate);
+
+        $date->add(new DateInterval('P' . strval($days) . 'D'));
+        $timetotrigger = $date->getTimestamp();
+
+        // Validate that the timing is 'after', course end date is no younger than $timtotrigger and days is between 0 and 365.
+        if ($enddate < $timetotrigger && $timing == local_pld_trigger_course_start_date::TYPE_AFTER && $enddate != 0) {
+            $a = html_writer::tag('span', get_string('trigger_course_start_date_err', 'local_pld'), array('class' => 'error'));
+            return get_string('trigger_course_start_date_description', 'local_pld', $a);
+        }
+        if ($days < 0 || $days > 365) {
+            $a = html_writer::tag('span', get_string('trigger_course_start_date_err', 'local_pld'), array('class' => 'error'));
+            return get_string('trigger_course_start_date_description', 'local_pld', $a);
+        }
+
+        $a = 'Event set for ' . $this->days . ' days ' . $this->timing . ' the course start date.';
+
+        return get_string('trigger_course_start_date_description', 'local_pld', $a);
+    }
+
+Hey QA team!
+
+New validations added to the new PLD event: Course Start date.
+
+Please add a new Course start date event in PLD creation page and test its behavior.
+
+Please reach out to me if you have any questions or concerns.
+
+Changelog:
+1. New test that validates if the time to trigger is older than the course start date.
+2. New validation when adding a number lower that 0 or higher than 365 to the day input box.
+3. Modifications added to the calculation of the next time to trigger timestamp.4
+4. New addition to the style.css file. Days input box is now fixed with a width of 3em.
+
+Note: Hours are not being taking into account, just days.
