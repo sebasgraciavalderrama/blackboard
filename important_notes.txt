@@ -712,3 +712,10 @@ Changelog:
 4. New addition to the style.css file. Days input box is now fixed with a width of 3em.
 
 Note: Hours are not being taking into account, just days.
+
+2019050101
+2019012401
+
+FOR THE FIX OF THE INPUT BOX
+https://jsfiddle.net/emkey08/zgvtjc51
+https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
