@@ -237,6 +237,8 @@ HOW TO GRUNT FILES
 HOW TO DELETE MODIFIED FILES FROM git status (i.e. When you execute a grunt command from moodle and it creates 400+ min.js files)
     git reset --hard *DO THIS AFTER ADDING (git add path/to/file.myfile) THE FILES YOU WANT TO COMMIT*
 
+EXECUTE CRON FROM WEB
+moodle.test/admin/cron.php
 
 STOP RECORDINGS ON MAC
     COMMAND + CONTROL + ESC
@@ -716,6 +718,11 @@ Note: Hours are not being taking into account, just days.
 2019050101
 2019012401
 
+vendor/bin/phpunit local/pld/tests/model/trigger_test.php
+
 FOR THE FIX OF THE INPUT BOX
 https://jsfiddle.net/emkey08/zgvtjc51
 https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-input
+
+moodle/category:viewhiddencategories
+tool/ally:viewlogs
