@@ -726,3 +726,266 @@ https://stackoverflow.com/questions/469357/html-text-input-allow-only-numeric-in
 
 moodle/category:viewhiddencategories
 tool/ally:viewlogs
+
+Plagiarism: Turnitin plagiarism_turnitin 3.1+ (2019060601)
+Blocks: Turnitin block_turnitin 2.7+ (2018121801)
+
+plagiarism_turnitin-2-2019050201
+block_turnitin-1-2018121801
+kow plugins-db plagiarism_turnitin block_turnitin
+
+
+
+
+#######################INT-14683########################################################################################################
+vagrant@vagrant:/vagrant/www/moodle$ git status
+On branch feature/INT-14683_overjoyed-crane
+Your branch is up to date with 'origin/master'.
+
+You are currently cherry-picking commit 7c28b98e363.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes to be committed:
+
+	new file:   plagiarism/turnitin/.gitignore
+	modified:   plagiarism/turnitin/.kow-plugin.php
+	modified:   plagiarism/turnitin/.travis.yml
+	modified:   plagiarism/turnitin/CHANGELOG.md
+	modified:   plagiarism/turnitin/README.md
+	modified:   plagiarism/turnitin/TROUBLESHOOTING.md
+	modified:   plagiarism/turnitin/ajax.php
+	new file:   plagiarism/turnitin/amd/build/eula.min.js
+	new file:   plagiarism/turnitin/amd/build/modal_eula_launch.min.js
+	new file:   plagiarism/turnitin/amd/build/modal_peermark_manager_launch.min.js
+	new file:   plagiarism/turnitin/amd/build/modal_peermark_reviews_launch.min.js
+	new file:   plagiarism/turnitin/amd/build/modal_quickmark_launch.min.js
+	new file:   plagiarism/turnitin/amd/build/modal_rubric_manager_launch.min.js
+	new file:   plagiarism/turnitin/amd/build/modal_rubric_view_launch.min.js
+	new file:   plagiarism/turnitin/amd/build/open_viewer.min.js
+	new file:   plagiarism/turnitin/amd/build/peermark.min.js
+	new file:   plagiarism/turnitin/amd/build/quickmark.min.js
+	new file:   plagiarism/turnitin/amd/build/refresh_submissions.min.js
+	new file:   plagiarism/turnitin/amd/build/resend_submission.min.js
+	new file:   plagiarism/turnitin/amd/build/rubric.min.js
+	new file:   plagiarism/turnitin/amd/src/eula.js
+	new file:   plagiarism/turnitin/amd/src/modal_eula_launch.js
+	new file:   plagiarism/turnitin/amd/src/modal_peermark_manager_launch.js
+	new file:   plagiarism/turnitin/amd/src/modal_peermark_reviews_launch.js
+	new file:   plagiarism/turnitin/amd/src/modal_quickmark_launch.js
+	new file:   plagiarism/turnitin/amd/src/modal_rubric_manager_launch.js
+	new file:   plagiarism/turnitin/amd/src/modal_rubric_view_launch.js
+	new file:   plagiarism/turnitin/amd/src/open_viewer.js
+	new file:   plagiarism/turnitin/amd/src/peermark.js
+	new file:   plagiarism/turnitin/amd/src/quickmark.js
+	new file:   plagiarism/turnitin/amd/src/refresh_submissions.js
+	new file:   plagiarism/turnitin/amd/src/resend_submission.js
+	new file:   plagiarism/turnitin/amd/src/rubric.js
+	modified:   plagiarism/turnitin/backup/moodle2/backup_plagiarism_turnitin_plugin.class.php
+	modified:   plagiarism/turnitin/backup/moodle2/restore_plagiarism_turnitin_plugin.class.php
+	modified:   plagiarism/turnitin/classes/digitalreceipt/pp_receipt_message.php
+	new file:   plagiarism/turnitin/classes/forms/turnitin_defaultsettingsform.class.php
+	new file:   plagiarism/turnitin/classes/forms/turnitin_form.class.php
+	new file:   plagiarism/turnitin/classes/forms/turnitin_setupform.class.php
+	modified:   plagiarism/turnitin/classes/privacy/provider.php
+	new file:   plagiarism/turnitin/classes/turnitin_assignment.class.php
+	modified:   plagiarism/turnitin/classes/turnitin_class.class.php
+	modified:   plagiarism/turnitin/classes/turnitin_comms.class.php
+	new file:   plagiarism/turnitin/classes/turnitin_user.class.php
+	renamed:    plagiarism/turnitin/turnitinplugin_view.class.php -> plagiarism/turnitin/classes/turnitin_view.class.php
+	new file:   plagiarism/turnitin/composer.json
+	new file:   plagiarism/turnitin/composer.lock
+	new file:   plagiarism/turnitin/css/colorbox.css
+	modified:   plagiarism/turnitin/db/access.php
+	modified:   plagiarism/turnitin/db/events.php
+	modified:   plagiarism/turnitin/db/install.xml
+	modified:   plagiarism/turnitin/db/tasks.php
+	modified:   plagiarism/turnitin/db/upgrade.php
+	modified:   plagiarism/turnitin/extras.php
+	new file:   plagiarism/turnitin/jquery/jquery.dataTables.columnFilter.js
+	new file:   plagiarism/turnitin/jquery/jquery.dataTables.css
+	new file:   plagiarism/turnitin/jquery/jquery.dataTables.js
+	new file:   plagiarism/turnitin/jquery/jquery.dataTables.plugins.js
+	new file:   plagiarism/turnitin/jquery/jquery.tooltipster.js
+	modified:   plagiarism/turnitin/jquery/plugins.php
+	deleted:    plagiarism/turnitin/jquery/turnitin_module.js
+	deleted:    plagiarism/turnitin/jquery/turnitin_module_post29.js
+	modified:   plagiarism/turnitin/jquery/turnitin_settings.js
+	modified:   plagiarism/turnitin/lang/ar/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/cs/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/de/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/en/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/es/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/fi/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/fr/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/it/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/ja/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/ko/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/nl/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/pl/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/pt_br/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/ro/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/ru/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/sv/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/tr/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/vi/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/zh_hans/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lang/zh_tw/plagiarism_turnitin.php
+	modified:   plagiarism/turnitin/lib.php
+	modified:   plagiarism/turnitin/locallib.php
+	new file:   plagiarism/turnitin/pix/colorbox/controls.png
+	new file:   plagiarism/turnitin/pix/colorbox/loading.gif
+	deleted:    plagiarism/turnitin/sdk/assignmentsoap.class.php
+	deleted:    plagiarism/turnitin/sdk/classsoap.class.php
+	deleted:    plagiarism/turnitin/sdk/membershipsoap.class.php
+	deleted:    plagiarism/turnitin/sdk/perflog.class.php
+	deleted:    plagiarism/turnitin/sdk/soap.class.php
+	deleted:    plagiarism/turnitin/sdk/submissionsoap.class.php
+	deleted:    plagiarism/turnitin/sdk/usersoap.class.php
+	modified:   plagiarism/turnitin/settings.php
+	modified:   plagiarism/turnitin/styles.css
+	new file:   plagiarism/turnitin/templates/modal_eula_launch.mustache
+	new file:   plagiarism/turnitin/templates/modal_peermark_manager_launch.mustache
+	new file:   plagiarism/turnitin/templates/modal_peermark_reviews_launch.mustache
+	new file:   plagiarism/turnitin/templates/modal_quickmark_launch.mustache
+	new file:   plagiarism/turnitin/templates/modal_rubric_manager_launch.mustache
+	new file:   plagiarism/turnitin/templates/modal_rubric_view_launch.mustache
+	modified:   plagiarism/turnitin/tests/behat/assignment.feature
+	new file:   plagiarism/turnitin/tests/behat/assignment_any_file_type.feature
+	new file:   plagiarism/turnitin/tests/behat/assignment_drafts.feature
+	new file:   plagiarism/turnitin/tests/behat/assignment_groups.feature
+	modified:   plagiarism/turnitin/tests/behat/assignment_multiple_files.feature
+	new file:   plagiarism/turnitin/tests/behat/assignment_resubmission.feature
+	modified:   plagiarism/turnitin/tests/behat/behat_plagiarism_turnitin.php
+	new file:   plagiarism/turnitin/tests/behat/eula.feature
+	new file:   plagiarism/turnitin/tests/behat/forum.feature
+	modified:   plagiarism/turnitin/tests/behat/installed.feature
+	new file:   plagiarism/turnitin/tests/behat/pseudo_submission.feature
+	new file:   plagiarism/turnitin/tests/behat/workshop.feature
+	new file:   plagiarism/turnitin/tests/classes/turnitin_assignment_class_test.php
+	new file:   plagiarism/turnitin/tests/classes/turnitin_user_class_test.php
+	new file:   plagiarism/turnitin/tests/fixtures/carpet.jpg
+	new file:   plagiarism/turnitin/tests/generator/lib.php
+	modified:   plagiarism/turnitin/tests/lib_test.php
+	modified:   plagiarism/turnitin/tests/locallib_test.php
+	modified:   plagiarism/turnitin/tests/modules/turnitin_assign_test.php
+	modified:   plagiarism/turnitin/tests/privacy/provider_test.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/.dockerignore
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/.envfile.template
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/.gitignore
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/Dockerfile
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/README.md
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/circle.yml
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/composer.json
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/composer.lock
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/phpdoc.xml
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/phpunit.xml
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/sandbox/example.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/AssignmentSoap.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/ClassSoap.php
+	renamed:    plagiarism/turnitin/sdk/logger.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/KLogger.php
+	renamed:    plagiarism/turnitin/sdk/lti.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/LTI.php
+	renamed:    plagiarism/turnitin/sdk/log.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/Logger.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/MembershipSoap.php
+	renamed:    plagiarism/turnitin/sdk/oauthsimple.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/OAuthSimple.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/OAuthSimpleException.php
+	renamed:    plagiarism/turnitin/sdk/response.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/Response.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/Soap.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/SubmissionSoap.php
+	renamed:    plagiarism/turnitin/sdk/tiiassignment.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiAssignment.php
+	renamed:    plagiarism/turnitin/sdk/tiiclass.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiClass.php
+	renamed:    plagiarism/turnitin/sdk/tiiform.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiForm.php
+	renamed:    plagiarism/turnitin/sdk/tiilti.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiLTI.php
+	renamed:    plagiarism/turnitin/sdk/tiimembership.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiMembership.php
+	renamed:    plagiarism/turnitin/sdk/tiipeermarkassignment.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiPeermarkAssignment.php
+	renamed:    plagiarism/turnitin/sdk/tiipseudouser.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiPseudoUser.php
+	renamed:    plagiarism/turnitin/sdk/tiirubric.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiRubric.php
+	renamed:    plagiarism/turnitin/sdk/tiisubmission.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiSubmission.php
+	renamed:    plagiarism/turnitin/sdk/tiiuser.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TiiUser.php
+	renamed:    plagiarism/turnitin/sdk/api.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TurnitinAPI.php
+	renamed:    plagiarism/turnitin/sdk/sdkexception.class.php -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TurnitinApiException.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/TurnitinSDKException.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/UserSoap.php
+	renamed:    plagiarism/turnitin/sdk/wsdl/lis-coursesection.wsdl -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/wsdl/lis-coursesection.wsdl
+	renamed:    plagiarism/turnitin/sdk/wsdl/lis-lineitem.wsdl -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/wsdl/lis-lineitem.wsdl
+	renamed:    plagiarism/turnitin/sdk/wsdl/lis-membership.wsdl -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/wsdl/lis-membership.wsdl
+	renamed:    plagiarism/turnitin/sdk/wsdl/lis-person.wsdl -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/wsdl/lis-person.wsdl
+	renamed:    plagiarism/turnitin/sdk/wsdl/lis-result.wsdl -> plagiarism/turnitin/vendor/Integrations/phpsdk-package/src/wsdl/lis-result.wsdl
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/assignmenttests/AssignmentTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/assignmenttests/InstructorDefaultsTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/basetests/APIConnectTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/classtests/ClassTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/exampleFile.doc
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/LTITest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/SoapTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiAssignmentTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiClassTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiFormTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiLTITest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiMembershipTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiPeermarkAssignmentTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiPseudoUserTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiRubricTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiSubmissionTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/gettersettertests/TiiUserTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/launchtests/LaunchTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/membershiptests/MembershipTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/submissiontests/SubmissionTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/testconsts.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/usertests/UserTest.php
+	new file:   plagiarism/turnitin/vendor/Integrations/phpsdk-package/tests/tiiapi/utilmethods.php
+	new file:   plagiarism/turnitin/vendor/autoload.php
+	new file:   plagiarism/turnitin/vendor/composer/ClassLoader.php
+	new file:   plagiarism/turnitin/vendor/composer/LICENSE
+	new file:   plagiarism/turnitin/vendor/composer/autoload_classmap.php
+	new file:   plagiarism/turnitin/vendor/composer/autoload_namespaces.php
+	new file:   plagiarism/turnitin/vendor/composer/autoload_psr4.php
+	new file:   plagiarism/turnitin/vendor/composer/autoload_real.php
+	new file:   plagiarism/turnitin/vendor/composer/autoload_static.php
+	new file:   plagiarism/turnitin/vendor/composer/installed.json
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/.gitignore
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/.travis.yml
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/LICENSE.txt
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/README.md
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/bootstrap.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/build
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/composer.json
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/examples/freebase.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/examples/github.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/examples/override.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/examples/showclix.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Bootstrap.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Exception/ConnectionErrorException.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Handlers/CsvHandler.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Handlers/FormHandler.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Handlers/JsonHandler.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Handlers/MimeHandlerAdapter.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Handlers/README.md
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Handlers/XHtmlHandler.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Handlers/XmlHandler.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Http.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Httpful.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Mime.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Proxy.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Request.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Response.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/src/Httpful/Response/Headers.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/tests/Httpful/HttpfulTest.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/tests/Httpful/requestTest.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/tests/bootstrap-server.php
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/tests/phpunit.xml
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/tests/static/test.json
+	new file:   plagiarism/turnitin/vendor/nategood/httpful/tests/test_image.jpg
+	modified:   plagiarism/turnitin/version.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	config_kow.php
+
+
+It took 7.92 seconds to enumerate untracked files. 'status -uno'
+may speed it up, but you have to be careful not to forget to add
+new files yourself (see 'git help status').
+
+########################################################################################################################################
