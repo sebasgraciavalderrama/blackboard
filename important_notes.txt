@@ -4,8 +4,6 @@ https://bit.ly/2GJ38gi
 TO USE MAILHOG
 http://moodle.test:8025/#
 
-
-
 <?php
 
   if ($oldversion < 2018112000) {
@@ -252,6 +250,13 @@ INT-14273 - SI 04090783
 
 HOW TO PRINT THE VALUE OF A VARIABLE
     var_dump($MyVariable);
+
+TO WRITE IN A FILE FROM code
+file_put_contents("Log_sebas_".date("Ymd", time()) . ".txt", print_r(array(
+          'sql' => $sql,
+          'params' => $filterparams,
+          'filtersql' => $filtersql
+      ), true), FILE_APPEND);
 
 INT-14215
 
@@ -989,3 +994,15 @@ may speed it up, but you have to be careful not to forget to add
 new files yourself (see 'git help status').
 
 ########################################################################################################################################
+
+
+
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment.feature
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_any_file_type.feature
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_drafts.feature
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_groups.feature
+
+
+
+
+/vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment.feature
