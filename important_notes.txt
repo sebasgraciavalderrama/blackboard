@@ -109,7 +109,9 @@ PARA HACER EL GIT CHERRY-PICK
         'git show' y luego seleccionar el hash del commit que quiero seleccionar...
 
 PARA REBASE
-    git pull origin release/3.5+2 --rebase
+    git pull origin release/3.5+2 --rebase //OLD
+    git pull --rebase origin release/3.6+1 
+    git push origin feature/INT-14650_lively-zorro -f
 
 VIDEO YOUTUBE PLD
     https://www.youtube.com/watch?v=YUvfziypPvs
@@ -1004,5 +1006,20 @@ vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.
 
 
 
+INT-14650
 
-/vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment.feature
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/blocks/reports/tests/behat/report_outrange.feature
+
+
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect_excludehidden']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/course_enabled']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/course_enabledpoints_grade']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabled']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_enrolend']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_enrolstart']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_grade']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_progress']" "xpath_element"
+And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_view']" "xpath_element"
+
+default no se envia
+ENVIAR EMAIL A USR check se envia
