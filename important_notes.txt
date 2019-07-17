@@ -1,7 +1,7 @@
 MY COLLAB PRIVATE ROOM
 https://bit.ly/2GJ38gi
 
-TO USE MAILHOG
+TO USE MAILHOG //email
 http://moodle.test:8025/#
 
 <?php
@@ -76,6 +76,7 @@ PARA CORRER LA PRUEBA
       vendor/bin/phpunit local/mrooms/tests/course_test.php
       vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 
+      vendor/bin/phpunit local/pld/tests/model/action_test.php
 PARA IMPRIMIR EN REGUS
     regus.tierrafirme@regus.com
 
@@ -110,7 +111,7 @@ PARA HACER EL GIT CHERRY-PICK
 
 PARA REBASE
     git pull origin release/3.5+2 --rebase //OLD
-    git pull --rebase origin release/3.6+1 
+    git pull --rebase origin release/3.6+1
     git push origin feature/INT-14650_lively-zorro -f
 
 VIDEO YOUTUBE PLD
