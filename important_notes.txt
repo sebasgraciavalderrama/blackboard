@@ -1,5 +1,8 @@
-MY COLLAB PRIVATE ROOM
-https://bit.ly/2GJ38gi
+MY COLLAB PRIVATE ROOM (Don't share this link, its only yours)
+https://us.bbcollab.com/collab/ui/session/join/efd729816f28458b98eb1b5eb79ed162
+
+MY COLLAB PRIVATE ROOM (Share this link with your attendees)
+https://tinyurl.com/sebasroom
 
 TO USE MAILHOG //email
 http://moodle.test:8025/#
