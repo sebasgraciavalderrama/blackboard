@@ -40,6 +40,7 @@ SI EL SERVIDOR DE SELENIUM MUESTRA PROBLEMAS
 INCIALIZAR BEHAT
     php admin/tool/behat/cli/init.php
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/view_report.feature
 Esto es para el ticket 13698 Behat tests
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/ajax_logout_msg.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/assignment_grading_capabilities.feature
@@ -73,6 +74,9 @@ PARA SUBIR EL PHPUnit
     php admin/tool/phpunit/cli/init.php
     vendor/bin/phpunit path/to/file
 
+vendor/bin/phpunit report/allylti/tests/launch_config_test.php
+vendor/bin/phpunit local/mrooms/tests/plugins_test.php
+
 PARA CORRER LA PRUEBA
     vendor/bin/phpunit path/to/file
     Ejemplo:
@@ -89,6 +93,8 @@ PARA HACER EL AMEND
     git commit --amend
     (luego se hace el push forzado)
     git push -f origin nombre_branch
+
+NOTE: AFTER A REOPEN ALWAYS REMEMBER TO CREATE A NEW BRANCH (kow checkout INT-XXXXX)
 
 git push -f origin feature/INT-13902_superficial-rattlesnake
 git push -f origin feature/INT-13698_substantial-newt
