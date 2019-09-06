@@ -47,7 +47,7 @@ Esto es para el ticket 13698 Behat tests
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personal_menu_messages.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personalmenu_grades.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/course_category_colors_setting.feature
-
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/test_accesibily_report.feature
 
 PLD BEHAT TEST'S
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
@@ -73,6 +73,8 @@ PARA QUITAR UN ARCHIVO DEL COMMIT
 PARA SUBIR EL PHPUnit
     php admin/tool/phpunit/cli/init.php
     vendor/bin/phpunit path/to/file
+
+
 
 vendor/bin/phpunit report/allylti/tests/launch_config_test.php
 vendor/bin/phpunit local/mrooms/tests/plugins_test.php
@@ -735,6 +737,7 @@ vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_drafts.feature
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_groups.feature
 
+vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/create_section_from_toc.feature
 INT-14650
 
 vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/blocks/reports/tests/behat/report_outrange.feature
@@ -751,3 +754,7 @@ And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuse
 
 default no se envia
 ENVIAR EMAIL A USR check se envia
+
+INT-14504 Implement hackthon snap color contrast checker
+
+git pull origin release/3.6+2 --rebase

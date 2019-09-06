@@ -1,0 +1,9 @@
+<p><br></p>
+<p><a href="yourlocal.site/Astronaut.usdz">yourlocal.site/Astronaut.usdz</a><br></p>
+<p><a href="yourlocal.site/Astronaut.glb">yourlocal.site/Astronaut.glb</a><br></p>
+<p></p>
+<pre><br></pre><br>
+<p></p>
+<model-viewer src="yourlocal.site/Astronaut.glb" alt="A 3D model of an astronaut" auto-rotate="" camera-controls="" background-color="#455A64"
+ios-src="yourlocal.site/Astronaut.usdz" magic-leap="" unstable-webxr=""
+</model-viewer>
