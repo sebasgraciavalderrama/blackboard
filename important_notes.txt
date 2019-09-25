@@ -7,6 +7,9 @@ https://tinyurl.com/sebasroom
 TO USE MAILHOG //email
 http://moodle.test:8025/#
 
+FOR MIN JAVASCRIPT FILES
+https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/
+
 <?php
 
   if ($oldversion < 2018112000) {
