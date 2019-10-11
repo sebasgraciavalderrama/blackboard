@@ -51,7 +51,7 @@ Esto es para el ticket 13698 Behat tests
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personalmenu_grades.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/course_category_colors_setting.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/test_accesibily_report.feature
-
+  vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
 PLD BEHAT TEST'S
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol_disable.feature
@@ -761,3 +761,12 @@ ENVIAR EMAIL A USR check se envia
 INT-14504 Implement hackthon snap color contrast checker
 
 git pull origin release/3.6+2 --rebase
+
+MutationObserver
+
+https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+https://javascript.info/mutation-observer
+https://www.smashingmagazine.com/2019/04/mutationobserver-api-guide/
+https://davidwalsh.name/mutationobserver-api
+https://medium.com/@abbeal/listening-to-the-dom-changes-with-mutationobserver-b53a068a58d2
+https://codeburst.io/observe-changes-in-dom-using-mutationobserver-9c2705222751
