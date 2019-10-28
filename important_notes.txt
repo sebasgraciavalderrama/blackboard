@@ -40,25 +40,10 @@ PARA EJECUTAR EL UPGRADE DESDE CONSOLA (CAMBIOS HECHOS SOBRE upgrade.php)
 SI EL SERVIDOR DE SELENIUM MUESTRA PROBLEMAS
     behat-servers-start
 
-INCIALIZAR BEHAT
+SUBIR EL BEHAT
     php admin/tool/behat/cli/init.php
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/view_report.feature
-Esto es para el ticket 13698 Behat tests
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/ajax_logout_msg.feature
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/assignment_grading_capabilities.feature
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personal_menu_messages.feature
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/personalmenu_grades.feature
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/course_category_colors_setting.feature
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/test_accesibily_report.feature
-  vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
-PLD BEHAT TEST'S
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol.feature
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/local/pld/tests/behat/pld_enrol_disable.feature
-
-ALLY LTI BEHAT TEST'S (GUY PR COMMIT Logger)
-    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/view_report.feature
-
+EJEMPLOS BEHAT
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/mod/lti/tests/behat/addtype.feature
 
 ERROR WHEN THE WEBSERVICE IS NOT DECLARED CORRECTLY
         Unknown error type: Class 'local_pld\webservice\external_api' not
@@ -76,9 +61,7 @@ PARA QUITAR UN ARCHIVO DEL COMMIT
 PARA SUBIR EL PHPUnit
     php admin/tool/phpunit/cli/init.php
     vendor/bin/phpunit path/to/file
-
-
-
+EJEMPLOS BEHAT
 vendor/bin/phpunit report/allylti/tests/launch_config_test.php
 vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 
@@ -333,11 +316,6 @@ PENSAR TODAS LAS POSIBLES COMBINACIONES DE LOS COMPONENTES:
 #F00 (RED)
 #EF0000 (OTRO ROJO)
 
-INT-14291
-
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/configure_lti_settings.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/report/allylti/tests/behat/view_report.feature
-
 INT-14312
     /admin/tool/log/store/legacy/classes/log/store.php
         class store...
@@ -563,16 +541,13 @@ INT-14368
 Argument 1 passed to block_collect\privacy\provider::delete_data_for_users() must be an instance of block_collect\privacy\approved_userlist, instance of core_privacy\local\request\approved_userlist given,
 called in /vagrant/www/moodle/blocks/collect/tests/privacy_provider_test.php on line 363
 
-
 13/40/86/68/00
-
 
 vendor/bin/phpunit /blocks/intelligent_learning/tests/privacy_provider_test.php
 vendor/bin/phpunit /blocks/intelligent_learning/tests/privacy_provider_test.php
 
   INT-14561
   THIS METHOD DISPLAYS A ERROR WHEN SAVING A 'SPECIFIC DATE AND TIME' EVENT WHEN THE DATE IS IN THE PAST
-
 
   public function get_display_text() {
           $timetotrigger = $this->calculate_next_timetotrigger(time());
@@ -729,31 +704,6 @@ Blocks: Turnitin block_turnitin 2.7+ (2018121801)
 plagiarism_turnitin-2-2019050201
 block_turnitin-1-2018121801
 kow plugins-db plagiarism_turnitin block_turnitin
-
-
-
-
-#######################INT-14683########################################################################################################
-
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_any_file_type.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_drafts.feature
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/plagiarism/turnitin/tests/behat/assignment_groups.feature
-
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/create_section_from_toc.feature
-INT-14650
-
-vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/blocks/reports/tests/behat/report_outrange.feature
-
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect_excludehidden']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/course_enabled']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/course_enabledpoints_grade']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabled']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_enrolend']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_enrolstart']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_grade']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_progress']" "xpath_element"
-And I click on "//input[@type='checkbox' and @id='id_s_blocks/collect/coursexuser_enabledpoints_view']" "xpath_element"
 
 default no se envia
 ENVIAR EMAIL A USR check se envia
