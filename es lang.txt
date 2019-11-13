@@ -1,0 +1,263 @@
+
+Warning: trim() expects parameter 1 to be string, array given in /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php on line 42
+
+Call Stack:
+    0.0002     364400   1. {main}() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:0
+    0.7293   14072456   2. tool_mrlang\service\import_service->run_import() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:49
+    1.9955   20746432   3. tool_mrlang\import\validate_translations->detect_changes() /vagrant/www/moodle/admin/tool/mrlang/classes/service/import_service.php:62
+    2.4915   24535928   4. trim() /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php:42
+
+
+Warning: strip_tags() expects parameter 1 to be string, array given in /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php on line 46
+
+Call Stack:
+    0.0002     364400   1. {main}() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:0
+    0.7293   14072456   2. tool_mrlang\service\import_service->run_import() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:49
+    1.9955   20746432   3. tool_mrlang\import\validate_translations->detect_changes() /vagrant/www/moodle/admin/tool/mrlang/classes/service/import_service.php:62
+    2.4924   24536336   4. strip_tags() /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php:46
+
+++ Language imported! ++
+!! The import process generated the following warning messages. !!
+Translation is still missing for the following:
+
+	* Component: qtype_ddimageortext
+	* Identifier: deletedchoice
+	* String: [Deleted choice]
+
+Translation is still missing for the following:
+
+	* Component: local_pld
+	* Identifier: checkbox_description_email
+	* String: Exclude users with suspended status from this communication:
+
+Translation is still missing for the following:
+
+	* Component: mod_elluminate
+	* Identifier: modulename_help
+	* String: The Blackboard Collaborate module enables teachers and students to meet in a virtual classroom by using Blackboard Collaborate web conferencing. These online meeting spaces feature: * two-way audio * multi-point video * text chat * interactive whiteboard, application and desktop sharing * rich media * breakout rooms * polls and quizzes These sessions can also be recorded for offline viewing and review. Optionally, students can be automatically assigned a grade for attending the session.
+
+Translation is still missing for the following:
+
+	* Component: mod_hsuforum
+	* Identifier: gradingmethodpreview
+	* String: Grading criteria
+
+Translation is still missing for the following:
+
+	* Component: mod_kalvidassign
+	* Identifier: notallowedtoreplacemedia
+	* String: You are not allowed to replace the media.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: coursepartialrender
+	* String: Enable lazy loading for course sections
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: coursepartialrenderdesc
+	* String: If enabled, course sections load on demand when selected by a user. This helps courses with large amounts of content load faster.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsenable
+	* String: Enable Advanced feeds (Experimental)
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsenabledesc
+	* String: Advanced feeds loads some personal menu items which allows faster load times and refreshes content on demand.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsperpage
+	* String: Advanced feeds item display count
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsperpagedesc
+	* String: Choose the number of items to display in the feed. Users can select View more to display additional items.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accessforumstringdis
+	* String: Display options
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accessforumstringmov
+	* String: Move options
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accesscalendarstring
+	* String: Calendar
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accessglobalsearchstring
+	* String: Search
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: lazyload_mod_page
+	* String: Enable default lazy loading for page resources
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: lazyload_mod_page_description
+	* String: If enabled, this setting significantly decreases course page load times for courses with many pages.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: pmadvancedfeed_viewmore
+	* String: View more
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: pmadvancedfeed_reload
+	* String: Refresh
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: multimediacard
+	* String: Multimedia files won't be displayed in the activity card views for the Snap theme. This will be applied in homepage and course pages only for the small activity and resource cards.
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:servicefailure
+	* String: Failed when consuming service.
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:servicefailure_exp
+	* String: Class: {$a->class}Params: {$a->params}
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:autoconfigfailureteachercap
+	* String: Failed when assigning a teacher archetype capability to the ally_webservice role.
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:autoconfigfailureteachercap_exp
+	* String: Capability: {$a->cap}Permission: {$a->permission}
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: s3_filedir_storage
+	* String: S3 filedir usage
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: mdata_filedir_storage
+	* String: Moodledata usage
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: totalstorageusage
+	* String: Total usage (moodledata total + s3 filedir total)
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: storage_filedir_rundate
+	* String: Most recent update
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: allmonths
+	* String:
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: collectionwarning
+	* String: Information can take up to two days to populate initial results, then updated weekly.
+
+-------------------------------------------------------------------------------
+/vagrant/moodledata/INT15097/lang/es_local
+ lang/es/admin.php                     |  8 ++---
+ lang/es/assign.php                    |  8 ++---
+ lang/es/attendance.php                |  2 +-
+ lang/es/auth.php                      |  2 +-
+ lang/es/auth_db.php                   |  2 +-
+ lang/es/auth_ldap.php                 |  4 +--
+ lang/es/backup.php                    |  8 ++---
+ lang/es/badges.php                    |  6 ++--
+ lang/es/block_community.php           |  2 +-
+ lang/es/block_conduit.php             |  8 ++---
+ lang/es/block_online_users.php        |  2 +-
+ lang/es/block_quickmail.php           |  2 +-
+ lang/es/block_reports.php             |  4 +--
+ lang/es/blog.php                      |  4 +--
+ lang/es/bulkusers.php                 |  6 ++--
+ lang/es/cachestore_memcached.php      |  2 +-
+ lang/es/chat.php                      |  2 +-
+ lang/es/choice.php                    |  4 +--
+ lang/es/cohort.php                    |  2 +-
+ lang/es/completion.php                |  2 +-
+ lang/es/data.php                      |  2 +-
+ lang/es/editor.php                    |  2 +-
+ lang/es/editor_tinymce.php            | 14 ++++----
+ lang/es/enrol.php                     |  2 +-
+ lang/es/enrol_cohort.php              |  2 +-
+ lang/es/error.php                     |  6 ++--
+ lang/es/feedback.php                  |  2 +-
+ lang/es/filters.php                   |  4 +--
+ lang/es/forum.php                     | 12 +++----
+ lang/es/grades.php                    | 10 +++---
+ lang/es/group.php                     | 66 +++++++++++++++++------------------
+ lang/es/hsuforum.php                  |  8 ++---
+ lang/es/hub.php                       |  2 +-
+ lang/es/lesson.php                    |  2 +-
+ lang/es/local_pld.php                 |  2 +-
+ lang/es/message.php                   |  2 +-
+ lang/es/message_badge.php             |  2 +-
+ lang/es/moodle.php                    | 44 +++++++++++------------
+ lang/es/outcome.php                   |  2 +-
+ lang/es/questionnaire.php             |  8 ++---
+ lang/es/quiz.php                      |  8 ++---
+ lang/es/quiz_responses.php            |  2 +-
+ lang/es/quiz_statistics.php           |  2 +-
+ lang/es/repository.php                |  2 +-
+ lang/es/resource.php                  |  2 +-
+ lang/es/role.php                      |  8 ++---
+ lang/es/scorm.php                     |  6 ++--
+ lang/es/survey.php                    | 60 +++++++++++++++----------------
+ lang/es/tag.php                       |  2 +-
+ lang/es/tool_monitor.php              |  2 +-
+ lang/es/tool_mrooms.php               |  2 +-
+ lang/es/tool_policy.php               |  4 +--
+ lang/es/tool_profiling.php            |  2 +-
+ lang/es/tool_usertours.php            |  2 +-
+ lang/es/webservice.php                |  6 ++--
+ lang/es/wiki.php                      |  8 ++---
+ lang/es/workshop.php                  | 12 +++----
+ lang/es/workshopallocation_manual.php |  2 +-
+ lang/es/workshopallocation_random.php |  4 +--
+ theme/snap/lang/es/theme_snap.php     | 13 +++----
+ 60 files changed, 210 insertions(+), 213 deletions(-)

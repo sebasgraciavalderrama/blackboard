@@ -44,6 +44,10 @@ SUBIR EL BEHAT
     php admin/tool/behat/cli/init.php
 EJEMPLOS BEHAT
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/mod/lti/tests/behat/addtype.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/title.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/activity_title_visibility.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/accessibility_forum_select_labels.feature
 
 ERROR WHEN THE WEBSERVICE IS NOT DECLARED CORRECTLY
         Unknown error type: Class 'local_pld\webservice\external_api' not
@@ -61,7 +65,7 @@ PARA QUITAR UN ARCHIVO DEL COMMIT
 PARA SUBIR EL PHPUnit
     php admin/tool/phpunit/cli/init.php
     vendor/bin/phpunit path/to/file
-EJEMPLOS BEHAT
+EJEMPLOS PHPUnit
 vendor/bin/phpunit report/allylti/tests/launch_config_test.php
 vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 
@@ -391,7 +395,8 @@ In local/pld/model/action.php
 INT-14329
   $CFG->messagingallusers
   \core_message\api::MESSAGE_PRIVACY_SITE
-  php admin/tool/task/cli/schedule_task.php --execute="\mod_forum\task\cron_task"
+  php admin/tool/task/cli/schedule_task.php --execute="\mod_attendance\task\cron_task"
+  php admin/tool/task/cli/schedule_task.php --execute="\mod_attendance\task\auto_mark"
   php lib/classes/task/messaging_cleanup_task.php --execute=""
   SELECT table_name AS `Table`, round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` FROM information_schema.TABLES WHERE table_schema = "moodleorg" AND table_name = "notifications";
 
@@ -720,3 +725,14 @@ https://www.smashingmagazine.com/2019/04/mutationobserver-api-guide/
 https://davidwalsh.name/mutationobserver-api
 https://medium.com/@abbeal/listening-to-the-dom-changes-with-mutationobserver-b53a068a58d2
 https://codeburst.io/observe-changes-in-dom-using-mutationobserver-9c2705222751
+
+PHP: Testing legacy applications
+PHP: Object oriented programming
+
+KOW LANG
+  1. Donwload the .zip including the translations
+  2. Extract the .zip file inside or outside /vagrant (You can copy the file and paste it in /vagrant/www/moodle and extract it there)
+  3. Go to vagrant session and type the following command: 'kow lang /path/to/folder/ INT-XXXXX'
+  4. Follow the prompt messages and make sure to copy the output of the translations in a separate file for each language.
+  5. 'git status' just to make sure everything looks fine.
+  5. 'kow push -p'

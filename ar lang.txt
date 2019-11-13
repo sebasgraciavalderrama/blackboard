@@ -1,0 +1,211 @@
+
+ Process ar lang? (yes/no) [yes]:
+ >
+
+
+Warning: trim() expects parameter 1 to be string, array given in /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php on line 42
+
+Call Stack:
+    0.0002     364400   1. {main}() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:0
+    2.7281   14072456   2. tool_mrlang\service\import_service->run_import() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:49
+    3.9285   21480056   3. tool_mrlang\import\validate_translations->detect_changes() /vagrant/www/moodle/admin/tool/mrlang/classes/service/import_service.php:62
+    5.9310   25269560   4. trim() /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php:42
+
+
+Warning: strip_tags() expects parameter 1 to be string, array given in /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php on line 46
+
+Call Stack:
+    0.0002     364400   1. {main}() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:0
+    2.7281   14072456   2. tool_mrlang\service\import_service->run_import() /vagrant/www/moodle/admin/tool/mrlang/cli/import.php:49
+    3.9285   21480056   3. tool_mrlang\import\validate_translations->detect_changes() /vagrant/www/moodle/admin/tool/mrlang/classes/service/import_service.php:62
+    5.9319   25269968   4. strip_tags() /vagrant/www/moodle/admin/tool/mrlang/classes/import/validate_translations.php:46
+
+++ Language imported! ++
+!! The import process generated the following warning messages. !!
+Translation is still missing for the following:
+
+	* Component: qtype_ddimageortext
+	* Identifier: deletedchoice
+	* String: [Deleted choice]
+
+Translation is still missing for the following:
+
+	* Component: local_pld
+	* Identifier: checkbox_description_email
+	* String: Exclude users with suspended status from this communication:
+
+Translation is still missing for the following:
+
+	* Component: mod_elluminate
+	* Identifier: modulename_help
+	* String: The Blackboard Collaborate module enables teachers and students to meet in a virtual classroom by using Blackboard Collaborate web conferencing. These online meeting spaces feature: * two-way audio * multi-point video * text chat * interactive whiteboard, application and desktop sharing * rich media * breakout rooms * polls and quizzes These sessions can also be recorded for offline viewing and review. Optionally, students can be automatically assigned a grade for attending the session.
+
+Translation is still missing for the following:
+
+	* Component: mod_hsuforum
+	* Identifier: gradingmethodpreview
+	* String: Grading criteria
+
+Translation is still missing for the following:
+
+	* Component: mod_kalvidassign
+	* Identifier: notallowedtoreplacemedia
+	* String: You are not allowed to replace the media.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: coursepartialrender
+	* String: Enable lazy loading for course sections
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: coursepartialrenderdesc
+	* String: If enabled, course sections load on demand when selected by a user. This helps courses with large amounts of content load faster.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsenable
+	* String: Enable Advanced feeds (Experimental)
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsenabledesc
+	* String: Advanced feeds loads some personal menu items which allows faster load times and refreshes content on demand.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsperpage
+	* String: Advanced feeds item display count
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: personalmenuadvancedfeedsperpagedesc
+	* String: Choose the number of items to display in the feed. Users can select View more to display additional items.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accessforumstringdis
+	* String: Display options
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accessforumstringmov
+	* String: Move options
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accesscalendarstring
+	* String: Calendar
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: accessglobalsearchstring
+	* String: Search
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: lazyload_mod_page
+	* String: Enable default lazy loading for page resources
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: lazyload_mod_page_description
+	* String: If enabled, this setting significantly decreases course page load times for courses with many pages.
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: pmadvancedfeed_viewmore
+	* String: View more
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: pmadvancedfeed_reload
+	* String: Refresh
+
+Translation is still missing for the following:
+
+	* Component: theme_snap
+	* Identifier: multimediacard
+	* String: Multimedia files won't be displayed in the activity card views for the Snap theme. This will be applied in homepage and course pages only for the small activity and resource cards.
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:servicefailure
+	* String: Failed when consuming service.
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:servicefailure_exp
+	* String: Class: {$a->class}Params: {$a->params}
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:autoconfigfailureteachercap
+	* String: Failed when assigning a teacher archetype capability to the ally_webservice role.
+
+Translation is still missing for the following:
+
+	* Component: tool_ally
+	* Identifier: logger:autoconfigfailureteachercap_exp
+	* String: Capability: {$a->cap}Permission: {$a->permission}
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: s3_filedir_storage
+	* String: S3 filedir usage
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: mdata_filedir_storage
+	* String: Moodledata usage
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: totalstorageusage
+	* String: Total usage (moodledata total + s3 filedir total)
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: storage_filedir_rundate
+	* String: Most recent update
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: allmonths
+	* String:
+
+Translation is still missing for the following:
+
+	* Component: tool_mrooms
+	* Identifier: collectionwarning
+	* String: Information can take up to two days to populate initial results, then updated weekly.
+
+-------------------------------------------------------------------------------
+/vagrant/moodledata/INT15097/lang/ar_local
+ lang/ar/attendance.php            | 2 +-
+ lang/ar/lesson.php                | 4 ++--
+ lang/ar/moodle.php                | 2 +-
+ theme/snap/lang/ar/theme_snap.php | 3 ---
+ 4 files changed, 4 insertions(+), 7 deletions(-)
