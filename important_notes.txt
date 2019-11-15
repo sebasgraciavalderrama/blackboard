@@ -7,6 +7,18 @@ https://tinyurl.com/sebasroom
 TO USE MAILHOG //email
 http://moodle.test:8025/#
 
+COPY KEY FROM HOST TO GUEST
+  SSH - update guest keys
+  Desde el host
+  cp ~/.ssh/id_rsa <donde está el vagrant>
+  cp ~/.ssh/known_hosts <donde está el vagrant>
+  ​
+  Luego desde el guest copia esos archivos a .ssh
+  vagrant@vagrant:/vagrant$ cp /vagrant/id_rsa ~/.ssh
+  vagrant@vagrant:/vagrant$ cp /vagrant/known_hosts ~/.ssh
+  vagrant@vagrant:/vagrant$ chmod 600 ~/.ssh/id_rsa
+  vagrant@vagrant:/vagrant$ chmod 600 ~/.ssh/known_hosts
+
 FOR MIN JAVASCRIPT FILES
 https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/
 
