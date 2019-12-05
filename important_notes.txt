@@ -10,6 +10,9 @@ http://moodle.test:8025/#
 FOR MIN JAVASCRIPT FILES
 https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/
 
+REDIS LOCK
+redis-cli flushall
+
 <?php
 
   if ($oldversion < 2018112000) {
