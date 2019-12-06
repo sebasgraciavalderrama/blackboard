@@ -7,6 +7,18 @@ https://tinyurl.com/sebasroom
 TO USE MAILHOG //email
 http://moodle.test:8025/#
 
+COPY KEY FROM HOST TO GUEST
+  SSH - update guest keys
+  Desde el host
+  cp ~/.ssh/id_rsa <donde está el vagrant>
+  cp ~/.ssh/known_hosts <donde está el vagrant>
+  ​
+  Luego desde el guest copia esos archivos a .ssh
+  vagrant@vagrant:/vagrant$ cp /vagrant/id_rsa ~/.ssh
+  vagrant@vagrant:/vagrant$ cp /vagrant/known_hosts ~/.ssh
+  vagrant@vagrant:/vagrant$ chmod 600 ~/.ssh/id_rsa
+  vagrant@vagrant:/vagrant$ chmod 600 ~/.ssh/known_hosts
+
 FOR MIN JAVASCRIPT FILES
 https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/
 
@@ -231,8 +243,6 @@ Author: Sebastian Gracia <sebastian.graciavalderrama@blackboard.com>
 Date:   Fri Feb 15 15:49:04 2019 -0500
 
     INT-14160: Node module deleted
-
-    andres_studentX
 
 kow accept https://github.com/blackboard-open-source/moodle-tool_ally/pull/23 admin/tool/ally
 #----------------------------------------------------------------------------#
@@ -749,3 +759,29 @@ RECREATE YOUR BRANCH
   git checkout -b feature/INT-15202_opulent-otter
   git cherry-pick 628ab55edde
   git push origin feature/INT-15202_opulent-otter -f
+
+
+KOW BACKPORT EXAMPLE
+kow backport MDL-66257 MDL-66598 MDL-66228 MDL-66377 MDL-66161
+
+Commits that will be cherry picked into your current branch:
+ * [167a8dc2760893795529ae8de9402ed0cf068f10] MDL-66228 mod_lesson: ensure return URL parameters are always local. by Paul Holden <paulh@moodle.com>
+ * [c7a5fc2f35f25b6cfe1275510b2ee140bf226341] MDL-66377 user: Only allow active users to retrieve files via tokenpluginfile.php by Juan Leyva <juanleyvadelgado@gmail.com>
+ * [1137b7d072e42ebb9d7dba1ea2d63f5304bd0298] MDL-66161 output: Escaping fatal error message and URL strings by Michael Hawkins <michaelh@moodle.com>
+ * [fd753889a23aad921105143b8d5704009ae41f40] MDL-66598 tool_oauth2: Make account confirmation required by default by Jun Pataleta <jun@moodle.com>
+ * [78d51b1fc6a875ead0a4563316ae5808db8395f7] MDL-66598 auth_oauth2: Add warning messages in confirm emails by Jun Pataleta <jun@moodle.com>
+ * [116d8541d2be3a4f9109d63ba671a690637f9eb2] MDL-66598 auth_oauth2: OAuth2 upgrade step by Jun Pataleta <jun@moodle.com>
+ * [4d10388df27f03833e23183d325642156ffc21da] MDL-66257 tool_cohortroles: Unassign the role on removal cohortroles. by cescobedo <carlos.escobedo@gmail.com>
+ * [abd981c6a77c7e7359a1f224a6a96167809c2ca0] MDL-66257 tool_cohortroles: unit test for users in multiple cohorts by Jake Dallimore <jake@moodle.com>
+
+ Do you want to continue? (yes/no) [yes]:
+ >
+
+Cherry picking: 167a8dc2760893795529ae8de9402ed0cf068f10
+Cherry picking: c7a5fc2f35f25b6cfe1275510b2ee140bf226341
+Cherry picking: 1137b7d072e42ebb9d7dba1ea2d63f5304bd0298
+Cherry picking: fd753889a23aad921105143b8d5704009ae41f40
+Cherry picking: 78d51b1fc6a875ead0a4563316ae5808db8395f7
+Cherry picking: 116d8541d2be3a4f9109d63ba671a690637f9eb2
+Cherry picking: 4d10388df27f03833e23183d325642156ffc21da
+Cherry picking: abd981c6a77c7e7359a1f224a6a96167809c2ca0
