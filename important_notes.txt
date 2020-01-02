@@ -83,6 +83,7 @@ PARA SUBIR EL PHPUnit
 EJEMPLOS PHPUnit
 vendor/bin/phpunit report/allylti/tests/launch_config_test.php
 vendor/bin/phpunit local/mrooms/tests/plugins_test.php
+vendor/bin/phpunit mod/hsuforum/tests/mail_test.php
 
 PARA CORRER LA PRUEBA
     vendor/bin/phpunit path/to/file
@@ -243,6 +244,8 @@ Author: Sebastian Gracia <sebastian.graciavalderrama@blackboard.com>
 Date:   Fri Feb 15 15:49:04 2019 -0500
 
     INT-14160: Node module deleted
+
+    andres_studentX
 
 kow accept https://github.com/blackboard-open-source/moodle-tool_ally/pull/23 admin/tool/ally
 #----------------------------------------------------------------------------#
@@ -751,14 +754,6 @@ KOW LANG
   4. Follow the prompt messages and make sure to copy the output of the translations in a separate file for each language.
   5. 'git status' just to make sure everything looks fine.
   5. 'kow push -p'
-
-RECREATE YOUR BRANCH
-  git branch -D feature/INT-15202_opulent-otter
-  git checkout release/3.7
-  git pull origin release/3.7
-  git checkout -b feature/INT-15202_opulent-otter
-  git cherry-pick 628ab55edde
-  git push origin feature/INT-15202_opulent-otter -f
 
 
 KOW BACKPORT EXAMPLE
