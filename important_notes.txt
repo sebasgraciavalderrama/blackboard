@@ -85,8 +85,12 @@ EJEMPLOS PHPUnit
 vendor/bin/phpunit report/allylti/tests/launch_config_test.php
 vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 vendor/bin/phpunit mod/hsuforum/tests/mail_test.php
+<<<<<<< HEAD
 vendor/bin/phpunit theme/snap/tests/local_test.php
 vendor/bin/phpunit local/pld/tests/tokens/tokens_test.php
+=======
+
+>>>>>>> c11f2aa2074ba77c66f7402ba384e958e768d710
 PARA CORRER LA PRUEBA
     vendor/bin/phpunit path/to/file
     Ejemplo:
@@ -254,6 +258,8 @@ Author: Sebastian Gracia <sebastian.graciavalderrama@blackboard.com>
 Date:   Fri Feb 15 15:49:04 2019 -0500
 
     INT-14160: Node module deleted
+
+    andres_studentX
 
 kow accept https://github.com/blackboard-open-source/moodle-tool_ally/pull/23 admin/tool/ally
 #----------------------------------------------------------------------------#
