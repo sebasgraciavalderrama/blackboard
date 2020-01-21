@@ -52,6 +52,16 @@ PARA EJECUTAR EL UPGRADE DESDE CONSOLA (CAMBIOS HECHOS SOBRE upgrade.php)
 SI EL SERVIDOR DE SELENIUM MUESTRA PROBLEMAS
     behat-servers-start
 
+KOW PLUGINS-FILESYSTEM
+  kow checkout YOUR_TICKET
+  kow plugins-filesystem /path/to/mod/hodor /path/to/block/thor
+
+SCHEDULED TASKS
+  confluence.bbpd.io/display/OSMRDevelopment/General+knowledge#Generalknowledge-Error:cannotruntasksfromtheconsole
+  i.e.
+    para ejectuar scheduled task desde la interfaz del sitio i.e: \assignfeedback_editpdf\task\convert_submissions
+    php admin/tool/task/cli/schedule_task.php --execute=\\assignfeedback_editpdf\\task\\convert_submissions
+
 SUBIR EL BEHAT
     php admin/tool/behat/cli/init.php
 EJEMPLOS BEHAT
@@ -85,12 +95,9 @@ EJEMPLOS PHPUnit
 vendor/bin/phpunit report/allylti/tests/launch_config_test.php
 vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 vendor/bin/phpunit mod/hsuforum/tests/mail_test.php
-<<<<<<< HEAD
 vendor/bin/phpunit theme/snap/tests/local_test.php
 vendor/bin/phpunit local/pld/tests/tokens/tokens_test.php
-=======
 
->>>>>>> c11f2aa2074ba77c66f7402ba384e958e768d710
 PARA CORRER LA PRUEBA
     vendor/bin/phpunit path/to/file
     Ejemplo:
