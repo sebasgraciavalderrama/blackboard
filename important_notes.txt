@@ -22,9 +22,6 @@ COPY KEY FROM HOST TO GUEST
 FOR MIN JAVASCRIPT FILES
 https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/
 
-REDIS LOCK
-redis-cli flushall
-
 <?php
 
   if ($oldversion < 2018112000) {
@@ -64,6 +61,10 @@ EJEMPLOS BEHAT
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat
     vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/accessibility_forum_select_labels.feature
 
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/coursemodule_page.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/front_page_module_page.feature
+    vendor/bin/behat --config /srv/moodledata/behat_moodledata/behatrun/behat/behat.yml /vagrant/www/moodle/theme/snap/tests/behat/activity_cards_functionality.feature
+
 ERROR WHEN THE WEBSERVICE IS NOT DECLARED CORRECTLY
         Unknown error type: Class 'local_pld\webservice\external_api' not
         found at /vagrant/www/moodle/local/pld/classes/webservice/pld_search_courses.php: 39 (Exception)
@@ -83,7 +84,9 @@ PARA SUBIR EL PHPUnit
 EJEMPLOS PHPUnit
 vendor/bin/phpunit report/allylti/tests/launch_config_test.php
 vendor/bin/phpunit local/mrooms/tests/plugins_test.php
-
+vendor/bin/phpunit mod/hsuforum/tests/mail_test.php
+vendor/bin/phpunit theme/snap/tests/local_test.php
+vendor/bin/phpunit local/pld/tests/tokens/tokens_test.php
 PARA CORRER LA PRUEBA
     vendor/bin/phpunit path/to/file
     Ejemplo:
@@ -100,6 +103,7 @@ PARA HACER EL AMEND
     git commit --amend
     (luego se hace el push forzado)
     git push -f origin nombre_branch
+    git push -f origin update/INT-15153_hidden-zebra
 
 NOTE: AFTER A REOPEN ALWAYS REMEMBER TO CREATE A NEW BRANCH (kow checkout INT-XXXXX)
 
@@ -129,6 +133,13 @@ PARA REBASE
     git pull origin release/3.5+2 --rebase //OLD
     git pull --rebase origin release/3.6+1
     git push origin feature/INT-14650_lively-zorro -f
+
+    git pull --rebase origin release/3.7+1
+    git push origin update/INT-15402_dapper-gorilla -f
+
+    git fetch
+git pull --rebase origin master
+git push -f origin {el nombre de la rama}
 
 VIDEO YOUTUBE PLD
     https://www.youtube.com/watch?v=YUvfziypPvs
@@ -406,6 +417,11 @@ In local/pld/model/action.php
         $resolved=$this->get_active_users($resolved, $event->courseid); //THIS LINE CLEANS RECIEPENTS THAT ARE SUSPENDED
         return $resolved;
     }
+
+php admin/tool/task/cli/schedule_task.php --execute="\mod_attendance\task\cron_task"
+\assignfeedback_editpdf\task\convert_submissions
+php mod/assign/feedback/editpdf/classes/task/convert_submissions.php --execute=
+
 
 INT-14329
   $CFG->messagingallusers
@@ -751,14 +767,6 @@ KOW LANG
   4. Follow the prompt messages and make sure to copy the output of the translations in a separate file for each language.
   5. 'git status' just to make sure everything looks fine.
   5. 'kow push -p'
-
-RECREATE YOUR BRANCH
-  git branch -D feature/INT-15202_opulent-otter
-  git checkout release/3.7
-  git pull origin release/3.7
-  git checkout -b feature/INT-15202_opulent-otter
-  git cherry-pick 628ab55edde
-  git push origin feature/INT-15202_opulent-otter -f
 
 
 KOW BACKPORT EXAMPLE
