@@ -7,6 +7,12 @@ https://tinyurl.com/sebasroom
 TO USE MAILHOG //email
 http://moodle.test:8025/#
 
+MIN FILES
+  go to the root (i.e theme/snap/amd/)
+  run 'npm install'
+  then run 'grunt amd'
+  then add the file and then kow push 
+
 COPY KEY FROM HOST TO GUEST
   SSH - update guest keys
   Desde el host
@@ -98,6 +104,7 @@ vendor/bin/phpunit local/mrooms/tests/plugins_test.php
 vendor/bin/phpunit mod/hsuforum/tests/mail_test.php
 vendor/bin/phpunit theme/snap/tests/local_test.php
 vendor/bin/phpunit local/pld/tests/tokens/tokens_test.php
+vendor/bin/phpunit theme/snap/tests/webservice_ws_course_toc_test.php
 
 PARA CORRER LA PRUEBA
     vendor/bin/phpunit path/to/file
@@ -117,6 +124,8 @@ PARA HACER EL AMEND
     git push -f origin nombre_branch
     git push -f origin update/INT-15153_hidden-zebra
     git push -f origin update/INT-15465_regal-penguin
+
+    git push -f origin update/INT-15465_exalted-brachiosaurus
 
 NOTE: AFTER A REOPEN ALWAYS REMEMBER TO CREATE A NEW BRANCH (kow checkout INT-XXXXX)
 
@@ -786,6 +795,7 @@ KOW LANG
 
 KOW BACKPORT EXAMPLE
 kow backport MDL-66257 MDL-66598 MDL-66228 MDL-66377 MDL-66161
+kow backport MDL-48610
 
 Commits that will be cherry picked into your current branch:
  * [167a8dc2760893795529ae8de9402ed0cf068f10] MDL-66228 mod_lesson: ensure return URL parameters are always local. by Paul Holden <paulh@moodle.com>
