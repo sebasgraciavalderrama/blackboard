@@ -1,5 +1,6 @@
 MY COLLAB PRIVATE ROOM (Don't share this link, its only yours)
 https://us.bbcollab.com/collab/ui/session/join/efd729816f28458b98eb1b5eb79ed162
+https://us.bbcollab.com/collab/ui/session/join/17cfd3f14842491885d40494c5ba6fdf
 
 MY COLLAB PRIVATE ROOM (Share this link with your attendees)
 https://tinyurl.com/sebasroom
@@ -11,7 +12,7 @@ MIN FILES
   go to the root (i.e theme/snap/amd/)
   run 'npm install'
   then run 'grunt amd'
-  then add the file and then kow push 
+  then add the file and then kow push
 
 COPY KEY FROM HOST TO GUEST
   SSH - update guest keys
