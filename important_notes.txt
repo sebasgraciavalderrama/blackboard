@@ -62,6 +62,7 @@ SI EL SERVIDOR DE SELENIUM MUESTRA PROBLEMAS
 KOW PLUGINS-FILESYSTEM
   kow checkout YOUR_TICKET
   kow plugins-filesystem /path/to/mod/hodor /path/to/block/thor
+  kow plugins-filesystem /vagrant/www/intellicart/local_intellicart
 
 SCHEDULED TASKS
   confluence.bbpd.io/display/OSMRDevelopment/General+knowledge#Generalknowledge-Error:cannotruntasksfromtheconsole
@@ -123,6 +124,7 @@ PARA HACER EL AMEND
     (luego se hace el push forzado)
     git push -f origin nombre_branch
     git push -f origin update/INT-15153_hidden-zebra
+    git push -f origin update/INT-15465_regal-penguin
 
     git push -f origin update/INT-15465_exalted-brachiosaurus
 
@@ -817,3 +819,19 @@ Cherry picking: 78d51b1fc6a875ead0a4563316ae5808db8395f7
 Cherry picking: 116d8541d2be3a4f9109d63ba671a690637f9eb2
 Cherry picking: 4d10388df27f03833e23183d325642156ffc21da
 Cherry picking: abd981c6a77c7e7359a1f224a6a96167809c2ca0
+
+
+How to save code in old branch?
+Sometimes you may have an old branch, but it contains some proof of concept code or some patches that might somehow be useful at a later date.  Even though chances of using this code are low, you may still want to preserve the code changes.  There are a couple of options you can take (like creating a local branch to save a copy), but the recommended approach is to create a patch file.  To generate the patch file, you must first know the number of commits you want to save from the branch.  Use git log to view the branch's commits and count how many you want to keep.  Here is an example of keeping the 3 top most commits in a branch (the exampleBranch can be replaced with your branch name and can include "origin/" prefix if the branch is remote):
+
+git log exampleBranch
+# Want to keep  the last 3 commits, so use this:
+git format-patch -3 --stdout exampleBranch > pr.patch
+Adjust the -3 option to whatever number of commits you want to preserve.  Review the generated example.patch file, it should contain each commit.  Then keep that patch file someplace off your computer, like attaching it to a Jira Issue.
+
+If you ever want to re-apply your commits, checkout a new branch using the Development Process and use this command:
+
+git am < /path/to/pr.patch
+Switch am with apply if you want to ignore the individual commits in the patch file and apply them all at once like a normal patch.
+
+Now you are free to delete the old branch.
