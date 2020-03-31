@@ -1,6 +1,5 @@
 MY COLLAB PRIVATE ROOM (Don't share this link, its only yours)
 https://us.bbcollab.com/collab/ui/session/join/efd729816f28458b98eb1b5eb79ed162
-https://us.bbcollab.com/collab/ui/session/join/17cfd3f14842491885d40494c5ba6fdf
 
 MY COLLAB PRIVATE ROOM (Share this link with your attendees)
 https://tinyurl.com/sebasroom
@@ -28,6 +27,13 @@ COPY KEY FROM HOST TO GUEST
 
 FOR MIN JAVASCRIPT FILES
 https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/
+
+TO RUN SCHEDULED TASKS FROM SITE
+  1. Go to Site Admin
+  2. Server -> System Paths
+  3. Add '/usr/bin/php' to Path to PHP CLI
+  4. Save and go to Server->Tasks->Scheduled tasks
+  5. Run any task :)
 
 <?php
 
@@ -106,6 +112,7 @@ vendor/bin/phpunit mod/hsuforum/tests/mail_test.php
 vendor/bin/phpunit theme/snap/tests/local_test.php
 vendor/bin/phpunit local/pld/tests/tokens/tokens_test.php
 vendor/bin/phpunit theme/snap/tests/webservice_ws_course_toc_test.php
+vendor/bin/phpunit blocks/collect/tests/plugin_test.php
 
 PARA CORRER LA PRUEBA
     vendor/bin/phpunit path/to/file
@@ -127,6 +134,9 @@ PARA HACER EL AMEND
     git push -f origin update/INT-15465_regal-penguin
 
     git push -f origin update/INT-15465_exalted-brachiosaurus
+    git push -f origin update/INT-15626_grumpy-antelope
+    git push -f origin update/INT-15626_wild-cobra
+
 
 NOTE: AFTER A REOPEN ALWAYS REMEMBER TO CREATE A NEW BRANCH (kow checkout INT-XXXXX)
 
@@ -835,3 +845,10 @@ git am < /path/to/pr.patch
 Switch am with apply if you want to ignore the individual commits in the patch file and apply them all at once like a normal patch.
 
 Now you are free to delete the old branch.
+
+
+
+intervalo de plugin = $this->config->interval
+siguiente vez que se ejecuta tarea =
+siguiente siquiente vez que se ejecuta tarea
+tiempo de terminación de tipo de plugin
